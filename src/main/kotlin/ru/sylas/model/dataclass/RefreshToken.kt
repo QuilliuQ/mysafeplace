@@ -1,3 +1,3 @@
 package ru.sylas.model.dataclass
 
-data class RefreshToken()
+data class RefreshToken(val token:String)
