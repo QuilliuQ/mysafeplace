@@ -18,9 +18,10 @@ fun main() {
         configureDatabase()
         configureSerialization()
         configureDI()
-        configureRouting()
+
         configureApiGenerator()
         ApiGeneratorRouter()
         gameRoutings()
+        configureRouting()
     }.start(wait = true)
 }

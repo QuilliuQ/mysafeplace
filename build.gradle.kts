@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     implementation ("com.github.papsign:Ktor-OpenAPI-Generator:-SNAPSHOT")
-
+    implementation ("com.github.RedMadRobot:input-mask-android:6.1.0")
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-server-host-common:$ktor_version")
     implementation("io.ktor:ktor-jackson:$ktor_version")
@@ -34,7 +34,6 @@ dependencies {
     implementation ("io.ktor:ktor-auth-jwt:$ktor_version")
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-
     //Exposed
     implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-dao:$exposed_version")
