@@ -1,12 +1,5 @@
 package ru.sylas.repository.dao
 
-import ru.sylas.common.Hashing.sha256
-import ru.sylas.common.JWTConfig
-import ru.sylas.common.Resource
-import ru.sylas.model.dataclass.User
-import ru.sylas.model.dataclass.UserToken
-import ru.sylas.model.tablesDAO.TokenDao
-import ru.sylas.model.tablesDAO.UserTableDao
 //
 //class AuthDao {
 //    suspend fun regUser(user: User):UserToken{

@@ -3,10 +3,7 @@ package ru.sylas
 import io.ktor.server.engine.*
 import io.ktor.server.tomcat.*
 import ru.sylas.plugins.*
-import ru.sylas.routings.ApiGeneratorRouter
-import ru.sylas.routings.configureRouting
-import ru.sylas.routings.configureStaticRoutings
-import ru.sylas.routings.gameRoutings
+import ru.sylas.routings.*
 
 fun main() {
     embeddedServer(Tomcat, port = 8080, host = "0.0.0.0") {
@@ -14,14 +11,15 @@ fun main() {
         configureMonitoring()
         configureStatusPages()
         configureAuthentification()
-        configureStaticRoutings()
+        configureStaticRouting()
         configureDatabase()
         configureSerialization()
         configureDI()
-
         configureApiGenerator()
-        ApiGeneratorRouter()
-        gameRoutings()
-        configureRouting()
+        apiGeneratorRouter()
+        appRouting()
+        authentificationRouting()
+        gameRouting()
+        statsRouting()
     }.start(wait = true)
 }

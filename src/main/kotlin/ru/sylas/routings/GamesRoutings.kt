@@ -3,39 +3,54 @@ package ru.sylas.routings
 
 
 
-import com.papsign.ktor.openapigen.annotations.Response
-import com.papsign.ktor.openapigen.annotations.parameters.QueryParam
 import com.papsign.ktor.openapigen.route.*
 import com.papsign.ktor.openapigen.route.path.auth.get
 import com.papsign.ktor.openapigen.route.response.respond
 import io.ktor.application.*
 import io.ktor.auth.*
-import io.ktor.http.*
+import org.koin.ktor.ext.inject
 import ru.sylas.common.Utils.auth
+import ru.sylas.common.myApiRouting
 import ru.sylas.model.dataclass.GamesResponse
-import ru.sylas.model.dataclass.Tag
+import ru.sylas.common.Tag
+import ru.sylas.model.dataclass.Correspond
+import ru.sylas.model.dataclass.Games
+import ru.sylas.model.requestdataclasses.GameID
+import ru.sylas.model.requestdataclasses.GameType
+import ru.sylas.service.gameservice.GameService
 
-@Response
-data class Error(val error: String)
-data class GameID(@QueryParam("Имя конкретной игры") val name: String)
-fun Application.gameRoutings(){
-    apiRouting {
 
+fun Application.gameRouting(){
 
+    val service: GameService by inject()
+
+    myApiRouting {
         tag(Tag.Games){
-        route("/games") {
-           throws(HttpStatusCode.BadRequest, null, { ex: Exception -> Error(ex.localizedMessage)}) {
                auth{
+        route("/games") {
                    this.get<Unit, List<GamesResponse>, UserIdPrincipal>(
                        info(
-                           summary = ""
-
-
+                           summary = "Получение списка игр"
                        ),
-                       example = emptyList()
+                       example = listOf(GamesResponse(GameType.Numbers,"image.png",3))
                    ) {
 
-                       respond(listOf(GamesResponse("", "")))
+                       respond(service.getGames())
+                   }
+               }
+                   route("/game") {
+                   this.get<GameID, Games, UserIdPrincipal>(
+                       info(
+                           summary = "Получение конкретной игры"
+                       ),
+                       example = Games.NumberGame(
+                           GameType.Numbers,
+                           listOf(Correspond("one.ogg", "1")),
+                           listOf(Correspond("one.png", "1"))
+                       )
+                   ) {id->
+
+                       respond(service.getGame(GameType.Numbers))
                    }
                }
 
@@ -44,4 +59,3 @@ fun Application.gameRoutings(){
         }
         }
     }
-}

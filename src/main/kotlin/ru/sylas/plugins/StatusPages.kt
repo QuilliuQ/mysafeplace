@@ -8,10 +8,7 @@ import io.ktor.response.*
 fun Application.configureStatusPages() {
         install(StatusPages) {
             status(HttpStatusCode.NotFound){
-                call.respond(HttpStatusCode.NotFound, mapOf("Error" to "Несуществующий запрос"))
-            }
-            status(HttpStatusCode.BadRequest){
-                call.respond(HttpStatusCode.BadRequest, mapOf("Error" to "Проверьте корректность запроса"))
+                call.respond(HttpStatusCode.NotFound, "Несуществующий запрос")
             }
         }
 }

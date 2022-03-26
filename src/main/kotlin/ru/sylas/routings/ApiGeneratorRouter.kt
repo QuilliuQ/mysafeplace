@@ -5,7 +5,7 @@ import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
-fun Application.ApiGeneratorRouter() {
+fun Application.apiGeneratorRouter() {
     routing {
         get("/openapi.json") {
             call.respond(openAPIGen.api.serialize())

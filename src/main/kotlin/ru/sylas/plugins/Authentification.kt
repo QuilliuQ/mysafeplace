@@ -4,8 +4,7 @@ import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
 import ru.sylas.common.JWTConfig
-import ru.sylas.model.dataclass.User
-import ru.sylas.model.tables.UserTable.login
+import ru.sylas.model.requestdataclasses.AuthUser
 
 fun Application.configureAuthentification(){
 
@@ -13,13 +12,13 @@ fun Application.configureAuthentification(){
 
     jwt("auth-jwt") {
         verifier(JWTConfig.verifier)
-        realm = "sylas.bonus"
+        realm = "sylas.wsr"
         validate {
             try {
                 val login = it.payload.getClaim("login").asString()
                 val password = it.payload.getClaim("password").asString()
                 if(!login.isNullOrEmpty() && !password.isNullOrEmpty()){
-                    User(login = login, password = password)
+                    AuthUser(email = login, password = password)
                 }else{
                     null
                 }

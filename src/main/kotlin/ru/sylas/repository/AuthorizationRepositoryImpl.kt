@@ -1,33 +1,20 @@
 package ru.sylas.repository
 
-import io.ktor.http.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.withContext
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
-import ru.sylas.common.Hashing.sha256
-import ru.sylas.common.JWTConfig
-import ru.sylas.common.Resource
-import ru.sylas.common.Utils.guard
-import ru.sylas.model.dataclass.ResponseError
-import ru.sylas.model.dataclass.User
+import ru.sylas.exceptions.UserAlreadyCreated
 import ru.sylas.model.dataclass.UserToken
 import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.NewUser
 import ru.sylas.model.tables.UserTable
-import ru.sylas.model.tablesDAO.TokenDao
 import ru.sylas.model.tablesDAO.UserTableDao
-import java.util.*
 
 class AuthorizationRepositoryImpl:AuthorizationRepository {
     override fun auth(user: AuthUser): UserToken {
-      return UserToken(UUID.randomUUID(),"")
+      throw UserAlreadyCreated()
     }
 
-    override suspend fun reg(user: NewUser): UserToken {
-              return  transaction {
+    override fun reg(user: NewUser): UserToken {
+              transaction {
                     UserTableDao.find { UserTable.login eq user.email }.singleOrNull().let{
                         throw UserAlreadyCreated()
                     }
@@ -40,7 +27,7 @@ class AuthorizationRepositoryImpl:AuthorizationRepository {
 
 
 
-class UserAlreadyCreated():Exception("Имя пользователя занято")
+
 
 
 //

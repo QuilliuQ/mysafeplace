@@ -12,4 +12,6 @@ object Utils {
     inline fun NormalOpenAPIRoute.auth(route: OpenAPIAuthenticatedRoute<UserIdPrincipal>.() -> Unit): OpenAPIAuthenticatedRoute<UserIdPrincipal> {
         return BearerProvider.apply(this).apply(route)
     }
+
+
 }

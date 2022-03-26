@@ -14,14 +14,14 @@ fun Application.configureApiGenerator(){
             version = "0.0.1"
             title = "Children Games API"
             description = "Children Games API"
-            contact {
-                name = "Sylas"
-                email = "main@sylas.ru"
-            }
+//            contact {
+//                name = "Sylas"
+//                email = "main@sylas.ru"
+//            }
         }
         // describe the server, add as many as you want
         server("http://0.0.0.0:8080") {
-            description = "Children Games API"
+
         }
         //optional custom schema object namer
         replaceModule(DefaultSchemaNamer, object: SchemaNamer {

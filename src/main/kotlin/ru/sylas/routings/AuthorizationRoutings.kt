@@ -1,64 +1,90 @@
 package ru.sylas.routings
 
-import com.papsign.ktor.openapigen.route.apiRouting
-import com.papsign.ktor.openapigen.route.info
-import com.papsign.ktor.openapigen.route.path.normal.get
+import com.fasterxml.jackson.module.kotlin.MissingKotlinParameterException
+import com.papsign.ktor.openapigen.route.*
 import com.papsign.ktor.openapigen.route.path.normal.post
-import com.papsign.ktor.openapigen.route.path.normal.route
 import com.papsign.ktor.openapigen.route.response.respond
-import com.papsign.ktor.openapigen.route.route
-import com.papsign.ktor.openapigen.route.tag
-import io.ktor.routing.*
 import io.ktor.application.*
-import io.ktor.auth.*
-import io.ktor.request.*
-import io.ktor.response.*
-import kotlinx.coroutines.flow.onEach
+import io.ktor.http.*
 import org.koin.ktor.ext.inject
-import ru.sylas.common.Resource
-import ru.sylas.model.dataclass.Tag
-import ru.sylas.model.dataclass.User
+import ru.sylas.common.myApiRouting
+import ru.sylas.exceptions.UnauthorizedException
+import ru.sylas.exceptions.UserAlreadyCreated
+import ru.sylas.common.Tag
 import ru.sylas.model.dataclass.UserToken
-import ru.sylas.model.requestdataclasses.AuthUser
-import ru.sylas.model.requestdataclasses.NewUser
-import ru.sylas.service.AuthorizationService
+import ru.sylas.model.requestdataclasses.*
+import ru.sylas.service.authorizationservice.AuthorizationService
 import java.util.*
 
-fun Application.configureRouting() {
+fun Application.authentificationRouting() {
 
     val service: AuthorizationService by inject()
 
 
-    apiRouting {
+    myApiRouting {
         tag(Tag.Auth) {
-
-
             route("/auth") {
                 route("/register") {
-                    post<Unit, UserToken, NewUser> { _, body ->
-                        respond(UserToken(userId = UUID.randomUUID(), "sha256"))
-                    }
-
-                }
-                route("/login") {
-                    post<Unit, UserToken, AuthUser>(
-                        info(
-                            summary = "Регистрация пользователя"
-                        ),
-                        exampleRequest = AuthUser("vasya@mail.com", password = "qwerty", hash = "sha256"),
-                        exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
+                    throws(
+                        status = HttpStatusCode.Conflict.description("Имя пользователя занято"),
+                        gen = { e: UserAlreadyCreated -> return@throws e.localizedMessage}
                     )
-                    { _, body ->
-//                        service.authorization(body).onEach { response->
-//                            when(response){
-//                                is Resource.Error -> TODO()
-//                                is Resource.Success -> TODO()
-//                            }
-//                        }
-                        respond(UserToken(userId = UUID.randomUUID(), "sha256 ${body.login}"))
+                        {
+                        post<HeaderKeyDevice, UserToken, NewUser>(
+                            info(
+                                summary = "Регистрация пользователя"
+                            ),
+                            exampleRequest = NewUser(
+                                "vasya@mail.com",
+                                password = "qwerty",
+                                childrenName = "Vasiliy",
+                                parentName = "Ivan"
+                            ),
+                            exampleResponse = UserToken(
+                                userId = UUID.randomUUID(),
+                                "sha256"
+                            )
+                        ) { header, body ->
+                            respond(service.registration(body,header.toKeyDevice()))
+                        }
+                    }
+                }
+                throws(
+                    status = HttpStatusCode.Unauthorized.description("Неправильный логин или пароль"),
+                    gen = { e: UnauthorizedException -> return@throws  "Неправильный логин или пароль"}
+                )
+                    .throws(
+                        status = HttpStatusCode.BadRequest.description("Пользователя не существует"),
+                        gen = { e: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
+                    ){
+                    route("/login") {
+                        post<HeaderKeyDevice, UserToken, AuthUser>(
+                            info(
+                                summary = "Авторизация пользователя"
+                            ),
+                            exampleRequest = AuthUser("vasya@mail.com", password = "qwerty"),
+                            exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
+                        )
+                        { header, body ->
+                            respond(service.authorization(body,header.toKeyDevice()))
+                        }
+                    }
+                        route("/pin") {
+                            post<HeaderKeyDevice, UserToken, PinCode>(
+                                info(
+                                    summary = "Авторизация пользователя"
+                                ),
+                                exampleRequest = PinCode(1232),
+                                exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
+                            )
+                            { header, pin ->
+                                respond(service.pinAuthorization(pin,header.toKeyDevice()))
+                            }
+                        }
+                }
                     }
                 }
             }
         }
-    }
-}
+
+
