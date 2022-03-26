@@ -1,4 +1,8 @@
 package ru.sylas.model.dataclass
 
-class ErrorResponse {
-}
+import io.ktor.http.*
+
+data class ResponseError(
+    val statusCode: HttpStatusCode,
+    val message:String?
+)

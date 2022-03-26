@@ -19,9 +19,12 @@ application {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://jitpack.io") }
 }
 
 dependencies {
+    implementation ("com.github.papsign:Ktor-OpenAPI-Generator:-SNAPSHOT")
+
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-server-host-common:$ktor_version")
     implementation("io.ktor:ktor-jackson:$ktor_version")

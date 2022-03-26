@@ -10,6 +10,4 @@ class TokenDao(id: EntityID<UUID>): UUIDEntity(id){
     companion object : UUIDEntityClass<TokenDao>(Token)
 
     var accessToken by Token.accessToken
-    var refreshToken by Token.refreshToken
-    var expireAt by Token.expireAt
 }

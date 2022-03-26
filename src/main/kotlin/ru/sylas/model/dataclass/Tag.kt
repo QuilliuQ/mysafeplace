@@ -1,4 +1,9 @@
 package ru.sylas.model.dataclass
 
-enum class Tag {
+import com.papsign.ktor.openapigen.APITag
+
+enum class Tag(override val description: String) : APITag {
+
+    Games("Version 1 API."),
+    Auth("Unclassified API."),
 }

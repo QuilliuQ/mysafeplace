@@ -1,3 +1,9 @@
 package ru.sylas.model.dataclass
 
-data class AccessTokenAPI()
+import com.papsign.ktor.openapigen.annotations.parameters.HeaderParam
+
+data class AccessTokenAPI(
+    @HeaderParam("Auth token")
+    val Authorization : String?
+)
+

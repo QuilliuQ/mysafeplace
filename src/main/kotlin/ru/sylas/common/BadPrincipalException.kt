@@ -1,2 +1,5 @@
-package ru.sylas.common 
+package ru.sylas.common
 
+class BadPrincipalException : Exception() {
+
+}

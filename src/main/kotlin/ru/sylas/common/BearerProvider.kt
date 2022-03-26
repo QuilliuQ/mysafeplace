@@ -1,6 +1,5 @@
 package ru.sylas.common
 
-import com.papsign.ktor.openapigen.APIException
 import com.papsign.ktor.openapigen.model.Described
 import com.papsign.ktor.openapigen.model.security.HttpSecurityScheme
 import com.papsign.ktor.openapigen.model.security.SecuritySchemeModel
@@ -21,7 +20,7 @@ class ForbiddenException(message: String) : RuntimeException(message)
 // even if we don't need scopes at all, an empty enum has to be there, see https://github.com/papsign/Ktor-OpenAPI-Generator/issues/65
 enum class Scopes : Described
 
-object BasicAuthProvider : AuthProvider<UserIdPrincipal> {
+object BearerProvider : AuthProvider<UserIdPrincipal> {
 
     // description for OpenAPI model
     override val security =

@@ -1,12 +1,15 @@
 package ru.sylas.common
 
-import io.ktor.application.*
+import com.papsign.ktor.openapigen.route.path.auth.OpenAPIAuthenticatedRoute
+import com.papsign.ktor.openapigen.route.path.normal.NormalOpenAPIRoute
 import io.ktor.auth.*
-import ru.sylas.model.dataclass.User
 
 object Utils {
     inline fun <T> T?.guard(nullClause: () -> Nothing): T {
         return this ?: nullClause()
     }
 
+    inline fun NormalOpenAPIRoute.auth(route: OpenAPIAuthenticatedRoute<UserIdPrincipal>.() -> Unit): OpenAPIAuthenticatedRoute<UserIdPrincipal> {
+        return BearerProvider.apply(this).apply(route)
+    }
 }

@@ -3,11 +3,9 @@ package ru.sylas.routings
 import io.ktor.routing.*
 import io.ktor.application.*
 import io.ktor.auth.*
-import io.ktor.auth.jwt.*
 import io.ktor.request.*
 import io.ktor.response.*
 import org.koin.ktor.ext.inject
-import ru.sylas.model.dataclass.RefreshToken
 import ru.sylas.model.dataclass.User
 import ru.sylas.service.AuthorizationService
 
@@ -43,16 +41,6 @@ fun Application.configureRouting() {
                 call.respond(result.statusCode,result.error!!)
             }
 
-        }
-        post("/refreshToken") {
-            val response = call.receive<RefreshToken>()
-            val result = service.refreshToken(response)
-            if(result.data != null){
-                call.respond(result.statusCode,result.data!!)
-            }
-            else{
-                call.respond(result.statusCode,result.error!!)
-            }
         }
     }
 }
