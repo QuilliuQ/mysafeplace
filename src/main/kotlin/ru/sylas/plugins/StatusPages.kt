@@ -10,5 +10,8 @@ fun Application.configureStatusPages() {
             status(HttpStatusCode.NotFound){
                 call.respond(HttpStatusCode.NotFound, "Несуществующий запрос")
             }
+            status(HttpStatusCode.Unauthorized){
+                call.respond(HttpStatusCode.NotFound, "Несуществующий запрос")
+            }
         }
 }

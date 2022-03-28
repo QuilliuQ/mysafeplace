@@ -21,5 +21,7 @@ fun main() {
         authentificationRouting()
         gameRouting()
         statsRouting()
+        configureWatch()
+        configureTVRouting()
     }.start(wait = true)
 }

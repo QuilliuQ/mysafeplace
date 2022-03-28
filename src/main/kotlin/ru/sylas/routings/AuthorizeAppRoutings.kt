@@ -10,6 +10,7 @@ import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
 import ru.sylas.common.myApiRouting
 import ru.sylas.exceptions.HellException
+import ru.sylas.exceptions.UnauthorizedException
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
@@ -50,6 +51,9 @@ fun Application.appRouting(){
                 throws(
                     status = HttpStatusCode.InternalServerError.description("Проблемы при регистрации"),
                     gen = { e: HellException -> return@throws e.localizedMessage }
+                ).throws(
+                    status = HttpStatusCode.Unauthorized.description("Отсутствует приложение с таким appId"),
+                    gen = { _:UnauthorizedException-> return@throws "Отсутствует приложение с таким appId" }
                 ){
                     post<Unit, KeyDevice,NewMobile>(
                         info(
@@ -58,6 +62,7 @@ fun Application.appRouting(){
                         exampleRequest = NewMobile("qwerdsa134ed","com.example.myapplication","Xiaomi Mi A3")
                     ){ _,mobile->
                         respond(service.regMobile(mobile))
+
                     }
                 }
                 get<AppId , List<NewMobile>>(

@@ -15,7 +15,7 @@ fun Application.myApiRouting(config: NormalOpenAPIRoute.() -> Unit) {
             application.feature(OpenAPIGen).globalModuleProvider
         ).throws(
             status = HttpStatusCode.BadRequest.description("Проверьте корректность запроса"),
-            gen = { e: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
+            gen = { _: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
         ).apply(config)
     }
 }

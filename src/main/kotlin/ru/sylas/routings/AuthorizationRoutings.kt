@@ -51,11 +51,11 @@ fun Application.authentificationRouting() {
                 }
                 throws(
                     status = HttpStatusCode.Unauthorized.description("Неправильный логин или пароль"),
-                    gen = { e: UnauthorizedException -> return@throws  "Неправильный логин или пароль"}
+                    gen = { _: UnauthorizedException -> return@throws  "Неправильный логин или пароль"}
                 )
                     .throws(
                         status = HttpStatusCode.BadRequest.description("Пользователя не существует"),
-                        gen = { e: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
+                        gen = { _: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
                     ){
                     route("/login") {
                         post<HeaderKeyDevice, UserToken, AuthUser>(
