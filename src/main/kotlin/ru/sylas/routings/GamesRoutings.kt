@@ -34,7 +34,7 @@ fun Application.gameRouting(){
                        ),
                        example = listOf(GamesResponse(GameType.Numbers,"image.png",3))
                    ) {
-
+                        println(this.pipeline.call.principal<UserIdPrincipal>()?.name)
                        respond(service.getGames())
                    }
                }

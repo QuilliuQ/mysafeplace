@@ -1,26 +1,28 @@
-package ru.sylas.service.appservice
+package ru.sylas.repository.apprepository
 
+import org.jetbrains.exposed.sql.transactions.transaction
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
 import ru.sylas.model.requestdataclasses.NewApp
 import ru.sylas.model.requestdataclasses.NewMobile
-import ru.sylas.repository.apprepository.AppRepository
 
-class AppServiceImpl(private val repository: AppRepository):AppService {
+class AppRepositoryImpl:AppRepository {
     override fun regApp(newApp: NewApp) {
-        repository.regApp(newApp)
+        transaction {
+
+        }
     }
 
     override fun getApps(competitor: Competitor): List<NewApp> {
-        return repository.getApps(competitor)
+        TODO("Not yet implemented")
     }
 
     override fun regMobile(newMobile: NewMobile): KeyDevice {
-        return repository.regMobile(newMobile)
+        TODO("Not yet implemented")
     }
 
     override fun getMobile(appId: AppId): List<NewMobile> {
-        return repository.getMobile(appId)
+        TODO("Not yet implemented")
     }
 }
