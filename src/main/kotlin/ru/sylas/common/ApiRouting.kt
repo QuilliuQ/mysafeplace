@@ -1,5 +1,6 @@
 package ru.sylas.common
 
+import com.fasterxml.jackson.core.JacksonException
 import com.fasterxml.jackson.module.kotlin.MissingKotlinParameterException
 import com.papsign.ktor.openapigen.OpenAPIGen
 import com.papsign.ktor.openapigen.route.path.normal.NormalOpenAPIRoute
@@ -16,6 +17,10 @@ fun Application.myApiRouting(config: NormalOpenAPIRoute.() -> Unit) {
         ).throws(
             status = HttpStatusCode.BadRequest.description("Проверьте корректность запроса"),
             gen = { _: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
-        ).apply(config)
+        ).throws(
+            status = HttpStatusCode.BadRequest.description("Проверьте корректность запроса"),
+            gen = { _: JacksonException -> return@throws "Проверьте корректность запроса" }
+        )
+            .apply(config)
     }
 }

@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="NextGood">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/App.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" afterDir="false" />
+    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="Good Front">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppID.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/app/AppDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/appModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/appModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/appservice/AppServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/appservice/AppServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/ApiRouting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/ApiRouting.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +36,8 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin File" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -61,6 +67,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="ApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
