@@ -1,22 +1,22 @@
 package ru.sylas.repository
 
 import org.jetbrains.exposed.sql.transactions.transaction
-import ru.sylas.exceptions.UserAlreadyCreated
+import ru.sylas.exceptions.UserAlreadyCreatedException
 import ru.sylas.model.dataclass.UserToken
 import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.NewUser
-import ru.sylas.model.tables.UserTable
-import ru.sylas.model.tablesDAO.UserTableDao
+import ru.sylas.model.tables.auth.UserTable
+import ru.sylas.model.tablesDAO.auth.UserTableDao
 
 class AuthorizationRepositoryImpl:AuthorizationRepository {
     override fun auth(user: AuthUser): UserToken {
-      throw UserAlreadyCreated()
+      throw UserAlreadyCreatedException()
     }
 
     override fun reg(user: NewUser): UserToken {
               transaction {
                     UserTableDao.find { UserTable.login eq user.email }.singleOrNull().let{
-                        throw UserAlreadyCreated()
+                        throw UserAlreadyCreatedException()
                     }
 
 

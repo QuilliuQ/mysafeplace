@@ -8,15 +8,6 @@ object App : IntIdTable("app") {
 }
 
 
-object Mobile:IntIdTable("mobile"){
-    val deviceId = text("deviceId")
-    val appId = reference("appId",App)
-    val device = text("device")
-}
 
 
 
-object KeyDeviceT:IntIdTable("keyDevice"){
-    val mobileId  = reference("mobileId",Mobile)
-    val keyDevice  = text("keyDevice")
-}

@@ -10,7 +10,7 @@ import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
 import ru.sylas.common.myApiRouting
 import ru.sylas.exceptions.HellException
-import ru.sylas.exceptions.UnknownAppID
+import ru.sylas.exceptions.UnknownAppIDException
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
@@ -51,7 +51,7 @@ fun Application.appRouting(){
             route("/mobile") {
                 throws(
                 status = HttpStatusCode.Unauthorized.description("Отсутствует приложение с таким appId"),
-                gen = { _:UnknownAppID -> return@throws "Отсутствует приложение с таким appId" }
+                gen = { _:UnknownAppIDException -> return@throws "Отсутствует приложение с таким appId" }
             ).
                 throws(
                     status = HttpStatusCode.InternalServerError.description("Проблемы при регистрации"),

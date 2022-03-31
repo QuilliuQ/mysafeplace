@@ -14,11 +14,12 @@ import io.ktor.http.*
 import io.ktor.util.pipeline.*
 import ru.sylas.exceptions.ForbiddenException
 import ru.sylas.exceptions.UnauthorizedException
+import ru.sylas.model.requestdataclasses.AuthUser
 
 
 enum class Scopes : Described
 
-object BearerProvider : AuthProvider<UserIdPrincipal> {
+object BearerProvider : AuthProvider<AuthUser> {
 
     // description for OpenAPI model
     override val security =
@@ -35,13 +36,13 @@ object BearerProvider : AuthProvider<UserIdPrincipal> {
             )
         )
 
-    override suspend fun getAuth(pipeline: PipelineContext<Unit, ApplicationCall>): UserIdPrincipal {
+    override suspend fun getAuth(pipeline: PipelineContext<Unit, ApplicationCall>): AuthUser {
         return pipeline.context.authentication.principal()
             ?: throw UnauthorizedException("Unable to verify given credentials, or credentials are missing.")
     }
 
 
-    override fun apply(route: NormalOpenAPIRoute): OpenAPIAuthenticatedRoute<UserIdPrincipal> {
+    override fun apply(route: NormalOpenAPIRoute): OpenAPIAuthenticatedRoute<AuthUser> {
         return OpenAPIAuthenticatedRoute(route.ktorRoute.authenticate("auth-jwt") { }, route.provider.child(), this)
             .throws(
                 status = HttpStatusCode.Unauthorized.description("Your identity could not be verified."),

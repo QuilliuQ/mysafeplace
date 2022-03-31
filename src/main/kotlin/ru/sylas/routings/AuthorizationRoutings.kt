@@ -9,7 +9,7 @@ import io.ktor.http.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.myApiRouting
 import ru.sylas.exceptions.UnauthorizedException
-import ru.sylas.exceptions.UserAlreadyCreated
+import ru.sylas.exceptions.UserAlreadyCreatedException
 import ru.sylas.common.Tag
 import ru.sylas.model.dataclass.UserToken
 import ru.sylas.model.requestdataclasses.*
@@ -27,7 +27,7 @@ fun Application.authentificationRouting() {
                 route("/register") {
                     throws(
                         status = HttpStatusCode.Conflict.description("Имя пользователя занято"),
-                        gen = { e: UserAlreadyCreated -> return@throws e.localizedMessage}
+                        gen = { e: UserAlreadyCreatedException -> return@throws e.localizedMessage}
                     )
                         {
                         post<HeaderKeyDevice, UserToken, NewUser>(

@@ -7,13 +7,14 @@ import org.jetbrains.exposed.sql.StdOutSqlLogger
 import org.jetbrains.exposed.sql.Transaction
 import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.transactions.transaction
+import ru.sylas.model.requestdataclasses.AuthUser
 
 object Utils {
     inline fun <T> T?.guard(nullClause: () -> Nothing): T {
         return this ?: nullClause()
     }
 
-    inline fun NormalOpenAPIRoute.auth(route: OpenAPIAuthenticatedRoute<UserIdPrincipal>.() -> Unit): OpenAPIAuthenticatedRoute<UserIdPrincipal> {
+    inline fun NormalOpenAPIRoute.auth(route: OpenAPIAuthenticatedRoute<AuthUser>.() -> Unit): OpenAPIAuthenticatedRoute<AuthUser> {
         return BearerProvider.apply(this).apply(route)
     }
 

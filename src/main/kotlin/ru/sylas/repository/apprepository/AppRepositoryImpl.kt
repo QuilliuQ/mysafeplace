@@ -5,7 +5,7 @@ import ru.sylas.common.Hashing.sha256
 import ru.sylas.common.Utils.guard
 import ru.sylas.common.Utils.loggedTransaction
 import ru.sylas.exceptions.HellException
-import ru.sylas.exceptions.UnknownAppID
+import ru.sylas.exceptions.UnknownAppIDException
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
@@ -49,7 +49,7 @@ class AppRepositoryImpl:AppRepository {
         try{
             return loggedTransaction {
                 val appId = AppDao.find(App.appId eq newMobile.appId).firstOrNull().guard {
-                    throw UnknownAppID("НЕТ айди")
+                    throw UnknownAppIDException("НЕТ айди")
 
                 }
                 val id = MobileDao.new {
