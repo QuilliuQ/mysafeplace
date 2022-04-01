@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="restore dao table">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Upsert.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/BadAppIdException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/BadKeyDeviceException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownCompetitorException.kt" afterDir="false" />
+    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="full app rep + auth rep">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/BadCredentialsException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/BadUserKeyDeviceException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/ApiRouting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/ApiRouting.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/AuthorizationModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/AuthorizationModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppIDException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppIDException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/AuthorizationRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/AuthorizationRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Upsert.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Upsert.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/TokenDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/TokenDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/pincode/PinCodeDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/pincode/PinCodeDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepositoryImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +69,7 @@
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="ru.sylas.exceptions" />
+      <recent name="ru" />
       <recent name="ru.sylas.model.tables.game" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -116,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648750670099</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="full app rep + auth rep">
+      <created>1648789923522</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648789923522</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +135,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="restore dao table" />
-    <option name="LAST_COMMIT_MESSAGE" value="restore dao table" />
+    <MESSAGE value="full app rep + auth rep" />
+    <option name="LAST_COMMIT_MESSAGE" value="full app rep + auth rep" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
