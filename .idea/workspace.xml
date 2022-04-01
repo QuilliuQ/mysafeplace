@@ -4,35 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="Good Front">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/KeyDeviceT.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/Mobile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/UserKeyDevice.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/GameT.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/GameTypeT.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SizeGameImage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/pincode/PinCodeT.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/UserKeyDeviceDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameTypeDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/SizeDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/pincode/PinCodeDao.kt" afterDir="false" />
+    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="restore dao table">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Upsert.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/BadAppIdException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/BadKeyDeviceException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownCompetitorException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/BearerProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/BearerProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/JWTConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/JWTConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppID.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppIDException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UserAlreadyCreated.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UserAlreadyCreatedException.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/Token.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/Token.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/UserTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/UserTable.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/TokenDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/TokenDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/UserTableDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/UserTableDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/AuthorizationRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/AuthorizationRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/ApiRouting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/ApiRouting.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/AuthorizationModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/AuthorizationModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppIDException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/exceptions/UnknownAppIDException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/AuthorizationRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/AuthorizationRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/dao/AuthDao.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizationRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizationRoutings.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/authorizationservice/AuthorizationServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,9 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="ru.sylas.exceptions" />
       <recent name="ru.sylas.model.tables.game" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ru.sylas.repository.auth" />
       <recent name="ru.sylas.model.tablesDAO.auth" />
       <recent name="ru.sylas.model.tables.auth" />
     </key>
@@ -119,6 +109,14 @@
       <option name="presentableId" value="Default" />
       <updated>1648441694181</updated>
     </task>
+    <task id="LOCAL-00001" summary="restore dao table">
+      <created>1648750670099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648750670099</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="restore dao table" />
+    <option name="LAST_COMMIT_MESSAGE" value="restore dao table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

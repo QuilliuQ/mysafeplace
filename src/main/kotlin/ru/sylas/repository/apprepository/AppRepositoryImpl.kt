@@ -4,8 +4,10 @@ import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import ru.sylas.common.Hashing.sha256
 import ru.sylas.common.Utils.guard
 import ru.sylas.common.Utils.loggedTransaction
+import ru.sylas.exceptions.BadAppIdException
 import ru.sylas.exceptions.HellException
 import ru.sylas.exceptions.UnknownAppIDException
+import ru.sylas.exceptions.UnknownCompetitorException
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
@@ -17,40 +19,30 @@ import ru.sylas.model.tablesDAO.app.*
 
 class AppRepositoryImpl:AppRepository {
     override fun regApp(newApp: NewApp) {
-        try{
             loggedTransaction {
                 AppDao.new {
                     appId = newApp.appId
                     competitor = newApp.competitor
                 }
             }
-        }
-        catch (e:Exception){
-            e.printStackTrace()
-            throw HellException(e.localizedMessage)
-        }
+
+
     }
 
     override fun getApps(competitor: Competitor): List<NewApp> {
-        try {
             return loggedTransaction {
                 AppDao.find(App.competitor eq competitor.competitor).toList().map {
                     it.toNewApp()
+                }.guard {
+                    throw UnknownCompetitorException()
                 }
             }
-        }
-        catch (e:Exception){
-            e.printStackTrace()
-            throw HellException(e.localizedMessage)
-        }
     }
 
     override fun regMobile(newMobile: NewMobile): KeyDevice {
-        try{
             return loggedTransaction {
                 val appId = AppDao.find(App.appId eq newMobile.appId).firstOrNull().guard {
-                    throw UnknownAppIDException("НЕТ айди")
-
+                    throw UnknownAppIDException()
                 }
                 val id = MobileDao.new {
                     deviceId = newMobile.deviceId
@@ -59,30 +51,23 @@ class AppRepositoryImpl:AppRepository {
                 }
                 KeyDeviceDao.new{
                         mobileId = id
-                        keyDevice = (mobileId.device+mobileId.appId).sha256()
+                        keyDevice = (id.device+id.appId).sha256()
                     }.toKey()
             }
-        }
-        catch (e:Exception){
-            e.printStackTrace()
-            throw HellException(e.localizedMessage)
 
-        }
     }
 
     override fun getMobile(appId: AppId): List<NewMobile> {
-        try {
            return loggedTransaction {
-                val app = AppDao.find(App.appId eq appId.appId).first()
+                val app = AppDao.find(App.appId eq appId.appId).firstOrNull().guard {
+                    throw UnknownAppIDException()
+                }
                 MobileDao.find(Mobile.appId eq app.id).toList().map {
                     it.toNewMobile()
+                }.guard {
+                    throw BadAppIdException()
                 }
 
             }
-        }
-        catch (e:Exception){
-            e.printStackTrace()
-            throw HellException(e.localizedMessage)
-        }
     }
 }

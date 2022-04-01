@@ -8,6 +8,7 @@ import com.papsign.ktor.openapigen.route.throws
 import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.routing.*
+import ru.sylas.exceptions.HellException
 
 fun Application.myApiRouting(config: NormalOpenAPIRoute.() -> Unit) {
     routing {
@@ -20,6 +21,9 @@ fun Application.myApiRouting(config: NormalOpenAPIRoute.() -> Unit) {
         ).throws(
             status = HttpStatusCode.BadRequest.description("Проверьте корректность запроса"),
             gen = { _: JacksonException -> return@throws "Проверьте корректность запроса" }
+        ).throws(
+            status = HttpStatusCode.InternalServerError.description("Внутренная ошибка сервера"),
+            gen = { _: HellException -> return@throws "Внутренная ошибка сервера" }
         )
             .apply(config)
     }

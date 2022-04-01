@@ -8,7 +8,6 @@ import ru.sylas.model.requestdataclasses.NewMobile
 
 interface AppRepository {
     fun regApp(newApp: NewApp)
-
     fun getApps(competitor: Competitor):List<NewApp>
     fun regMobile(newMobile: NewMobile): KeyDevice
     fun getMobile(appId: AppId):List<NewMobile>
