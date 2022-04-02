@@ -7,8 +7,8 @@ import org.jetbrains.exposed.sql.and
 import ru.sylas.common.JWTConfig
 import ru.sylas.common.Utils.guard
 import ru.sylas.common.Utils.loggedTransaction
-import ru.sylas.model.tables.auth.Token
-import ru.sylas.model.tables.auth.UserTable
+import ru.sylas.model.tables.auth.TokenT
+import ru.sylas.model.tables.auth.UserTableT
 import ru.sylas.model.tablesDAO.auth.TokenDao
 import ru.sylas.model.tablesDAO.auth.UserTableDao
 
@@ -42,10 +42,10 @@ private fun findUser(jwtCredential: JWTCredential):Boolean{
         val password = jwtCredential.payload.getClaim("secret").asString().guard {
             return@loggedTransaction
         }
-        val userDB = UserTableDao.find { UserTable.email eq email and (UserTable.secret eq password) }.firstOrNull().guard {
+        val userDB = UserTableDao.find { UserTableT.email eq email and (UserTableT.secret eq password) }.firstOrNull().guard {
             return@loggedTransaction
         }
-        TokenDao.find { Token.userId eq userDB.id }.guard {
+        TokenDao.find { TokenT.userId eq userDB.id }.guard {
             return@loggedTransaction
         }
     }

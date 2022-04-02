@@ -12,7 +12,7 @@ import ru.sylas.common.Utils.auth
 import ru.sylas.common.myApiRouting
 import ru.sylas.model.dataclass.GamesResponse
 import ru.sylas.common.Tag
-import ru.sylas.model.dataclass.Correspond
+import ru.sylas.model.dataclass.Source
 import ru.sylas.model.dataclass.GameSize
 import ru.sylas.model.dataclass.Games
 import ru.sylas.model.requestdataclasses.AuthUser
@@ -45,8 +45,8 @@ fun Application.gameRouting(){
                        ),
                        example = Games.NumberGame(
                            GameType.Numbers,
-                           listOf(Correspond("one.ogg", "1")),
-                           listOf(Correspond("one.png", "1"))
+                           listOf(Source("one.ogg", "1")),
+                           listOf(Source("one.png", "1"))
                        )
                    ) {id->
 

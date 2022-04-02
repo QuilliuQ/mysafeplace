@@ -6,24 +6,24 @@ import org.jetbrains.exposed.dao.id.EntityID
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.requestdataclasses.NewApp
 import ru.sylas.model.requestdataclasses.NewMobile
-import ru.sylas.model.tables.app.App
+import ru.sylas.model.tables.app.AppT
 import ru.sylas.model.tables.app.KeyDeviceT
-import ru.sylas.model.tables.app.Mobile
+import ru.sylas.model.tables.app.MobileT
 
 class AppDao(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<AppDao>(App)
+    companion object : IntEntityClass<AppDao>(AppT)
 
-    var appId by App.appId
-    var competitor by App.competitor
+    var appId by AppT.appId
+    var competitor by AppT.competitor
 
 }
 
 class MobileDao(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<MobileDao>(Mobile)
+    companion object : IntEntityClass<MobileDao>(MobileT)
 
-    var deviceId by Mobile.deviceId
-    var appId by AppDao referencedOn Mobile.appId
-    var device by Mobile.device
+    var deviceId by MobileT.deviceId
+    var appId by AppDao referencedOn MobileT.appId
+    var device by MobileT.device
 
 }
 

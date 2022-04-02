@@ -13,9 +13,9 @@ import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.NewUser
 import ru.sylas.model.requestdataclasses.PinCode
 import ru.sylas.model.tables.app.KeyDeviceT
-import ru.sylas.model.tables.auth.Token
-import ru.sylas.model.tables.auth.UserKeyDevice
-import ru.sylas.model.tables.auth.UserTable
+import ru.sylas.model.tables.auth.TokenT
+import ru.sylas.model.tables.auth.UserKeyDeviceT
+import ru.sylas.model.tables.auth.UserTableT
 import ru.sylas.model.tables.pincode.PinCodeT
 import ru.sylas.model.tablesDAO.app.KeyDeviceDao
 import ru.sylas.model.tablesDAO.auth.TokenDao
@@ -30,7 +30,7 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
 
     override fun authorization(user: AuthUser, keyDevice: KeyDevice): UserToken {
         return loggedTransaction{
-            val userDB = UserTableDao.find { UserTable.email eq user.email }.firstOrNull().guard {
+            val userDB = UserTableDao.find { UserTableT.email eq user.email }.firstOrNull().guard {
                 throw BadCredentialsException()
             }
             if (userDB.secret == user.password.sha256()) {
@@ -39,12 +39,12 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
                         throw BadKeyDeviceException()
                     }
 
-                val userKey = UserKeyDeviceDao.upsert(UserKeyDevice.keyDeviceId, keyDeviceDB.id) {
+                val userKey = UserKeyDeviceDao.upsert(UserKeyDeviceT.keyDeviceId, keyDeviceDB.id) {
                     this.userId = userDB
                     this.keyDeviceId = keyDeviceDB
                 }
 
-                TokenDao.upsert(Token.userId, userDB.id, Token.userKeyDeviceId, userKey.id) {
+                TokenDao.upsert(TokenT.userId, userDB.id, TokenT.userKeyDeviceId, userKey.id) {
                     this.userId = userDB
                     this.accessToken = JWTConfig.generateToken(userDB)
                     this.userKeyDeviceId = userKey
@@ -59,7 +59,7 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
 
     override fun registration(user: NewUser, keyDevice: KeyDevice): UserToken {
         return loggedTransaction {
-            if(UserTableDao.find { UserTable.email eq user.email }.empty()){
+            if(UserTableDao.find { UserTableT.email eq user.email }.empty()){
               val keyDeviceDB =  KeyDeviceDao.find { KeyDeviceT.keyDevice eq keyDevice.keyDevice }.firstOrNull().guard {
                     throw BadKeyDeviceException()
                 }
@@ -101,7 +101,7 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
                     throw BadPinCodeException()
                 }
              pinDB.delete()
-             TokenDao.find{ Token.userKeyDeviceId eq useKeyDeviceDB.id }.first().toUserToken()
+             TokenDao.find{ TokenT.userKeyDeviceId eq useKeyDeviceDB.id }.first().toUserToken()
         }
     }
 
@@ -125,7 +125,7 @@ fun getKeyDevice(keyDevice:KeyDevice) = KeyDeviceDao
 
 fun getUserKeyDevice(keyDevice: KeyDevice) :UserKeyDeviceDao {
     val keyDeviceDB = getKeyDevice(keyDevice)
-    return UserKeyDeviceDao.find{ UserKeyDevice.keyDeviceId eq keyDeviceDB.id}.firstOrNull().guard {
+    return UserKeyDeviceDao.find{ UserKeyDeviceT.keyDeviceId eq keyDeviceDB.id}.firstOrNull().guard {
         //данное устройство не авторизвано ниодном пользователем
         throw BadUserKeyDeviceException()
     }

@@ -4,21 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + fail on game bearer">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/GenerateDB.kt" afterDir="false" />
+    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + game+ bearer">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/AnimalsT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/CorrespondingT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/GameSourcesT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/OneGameT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SourceT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SourceTypeT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/AnimalDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/CorrespondingDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/OneGameDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/SourceDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/BearerProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/BearerProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/JWTConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/JWTConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/GameT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/GameT.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SizeGameImage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/GameSizeT.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/SizeDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameSizeDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/GenerateDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/GenerateDB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/Games.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/Games.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/AppT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/KeyDeviceT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/KeyDeviceT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/Mobile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/app/MobileT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/Token.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/TokenT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/UserKeyDevice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/UserKeyDeviceT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/UserTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/auth/UserTableT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/pincode/PinCodeT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/pincode/PinCodeT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/stats/StatsT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/stats/StatsT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/stats/UserStat.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/stats/UserStatT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/app/AppDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/app/AppDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/TokenDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/TokenDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/UserKeyDeviceDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/UserKeyDeviceDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/UserTableDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/auth/UserTableDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/pincode/PinCodeDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/pincode/PinCodeDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/stats/UserStatDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/stats/UserStatDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Authentification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Authentification.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/StatusPages.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/apprepository/AppRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/auth/AuthorizationRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizationRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizationRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/AuthorizeAppRoutings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/game/GameRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/game/GameRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,10 +97,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="ru.sylas.model.tables.game" />
       <recent name="ru.sylas.exceptions" />
       <recent name="ru.sylas.model.tables.stats" />
       <recent name="ru" />
-      <recent name="ru.sylas.model.tables.game" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="ru.sylas.repository.auth" />
@@ -113,7 +132,8 @@
       <updated>1648441694181</updated>
       <workItem from="1648879425369" duration="542000" />
       <workItem from="1648879974549" duration="93000" />
-      <workItem from="1648880765079" duration="5237000" />
+      <workItem from="1648880765079" duration="9320000" />
+      <workItem from="1648899241931" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="restore dao table">
       <created>1648750670099</created>
@@ -143,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648878965531</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test app auth + game+ bearer">
+      <created>1648886100612</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648886100612</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +193,8 @@
     <MESSAGE value="full app rep + auth rep" />
     <MESSAGE value="full app rep + auth rep + get pin" />
     <MESSAGE value="test app auth + fail on game bearer" />
-    <option name="LAST_COMMIT_MESSAGE" value="test app auth + fail on game bearer" />
+    <MESSAGE value="test app auth + game+ bearer" />
+    <option name="LAST_COMMIT_MESSAGE" value="test app auth + game+ bearer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

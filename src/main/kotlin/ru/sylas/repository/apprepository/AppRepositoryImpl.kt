@@ -12,8 +12,8 @@ import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
 import ru.sylas.model.requestdataclasses.NewApp
 import ru.sylas.model.requestdataclasses.NewMobile
-import ru.sylas.model.tables.app.App
-import ru.sylas.model.tables.app.Mobile
+import ru.sylas.model.tables.app.AppT
+import ru.sylas.model.tables.app.MobileT
 import ru.sylas.model.tablesDAO.app.*
 
 class AppRepositoryImpl : AppRepository {
@@ -30,7 +30,7 @@ class AppRepositoryImpl : AppRepository {
 
     override fun getApps(competitor: Competitor): List<NewApp> {
         return loggedTransaction {
-            val app = AppDao.find(App.competitor eq competitor.competitor)
+            val app = AppDao.find(AppT.competitor eq competitor.competitor)
             if (!app.empty()) {
                 app.toList().map {
                     it.toNewApp()
@@ -44,7 +44,7 @@ class AppRepositoryImpl : AppRepository {
 
     override fun regMobile(newMobile: NewMobile): KeyDevice {
         return loggedTransaction {
-            val appId = AppDao.find(App.appId eq newMobile.appId).firstOrNull().guard {
+            val appId = AppDao.find(AppT.appId eq newMobile.appId).firstOrNull().guard {
                 throw UnknownAppIDException()
             }
             val id = MobileDao.new {
@@ -62,10 +62,10 @@ class AppRepositoryImpl : AppRepository {
 
     override fun getMobile(appId: AppId): List<NewMobile> {
         return loggedTransaction {
-            val app = AppDao.find(App.appId eq appId.appId).firstOrNull().guard {
+            val app = AppDao.find(AppT.appId eq appId.appId).firstOrNull().guard {
                 throw UnknownAppIDException()
             }
-            val mobile = MobileDao.find(Mobile.appId eq app.id)
+            val mobile = MobileDao.find(MobileT.appId eq app.id)
             if (!mobile.empty()) {
                 mobile.toList().map {
                     it.toNewMobile()

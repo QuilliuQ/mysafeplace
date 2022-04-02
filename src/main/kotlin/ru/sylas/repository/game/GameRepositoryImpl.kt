@@ -17,6 +17,11 @@ class GameRepositoryImpl:GameRepository {
     }
 
     override fun getGame(id: GameType): Games {
-        throw HellException("")
+        when(id){
+            GameType.Numbers -> TODO()
+            GameType.Animals -> TODO()
+            GameType.House -> TODO()
+            GameType.Cars -> TODO()
+        }
     }
 }
