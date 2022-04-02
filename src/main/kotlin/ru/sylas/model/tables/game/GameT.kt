@@ -7,3 +7,4 @@ object GameT:IntIdTable("game") {
     val image = text("image")
     val size = reference("size",SizeGameImage)
 }
+

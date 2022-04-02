@@ -10,10 +10,11 @@ import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
 import ru.sylas.common.myApiRouting
 import ru.sylas.exceptions.BadAppIdException
-import ru.sylas.exceptions.HellException
 import ru.sylas.exceptions.UnknownAppIDException
 import ru.sylas.exceptions.UnknownCompetitorException
 import ru.sylas.model.dataclass.KeyDevice
+import ru.sylas.model.dataclass.Message
+import ru.sylas.model.dataclass.toResponseMessage
 import ru.sylas.model.requestdataclasses.AppId
 import ru.sylas.model.requestdataclasses.Competitor
 import ru.sylas.model.requestdataclasses.NewApp
@@ -25,18 +26,19 @@ fun Application.appRouting(){
     myApiRouting {
         tag(Tag.App){
                 route("/app") {
-                    post<Unit,String,NewApp>(
+                    post<Unit,Message,NewApp>(
                         info(
                             summary = "Регистрация приложения"
                         ),
                         exampleRequest = NewApp("com.example.myapplication","Competitor-1")
                     ){ _,app->
                       service.regApp(app)
-                      respond("OK")
+                      respond("OK".toResponseMessage())
                     }
                     throws(
                         status = HttpStatusCode.NotFound.description("У данного Competitor Отсутствуют приложения"),
-                        gen = { _: UnknownCompetitorException-> return@throws "У данного Competitor Отсутствуют приложения"}
+                        example = "У данного Competitor Отсутствуют приложения",
+                        UnknownCompetitorException::class
                     ).get<Competitor , List<NewApp>>(
                         info(
                             summary = "Получение списка приложений участника"
@@ -50,7 +52,8 @@ fun Application.appRouting(){
             route("/mobile") {
                 throws(
                 status = HttpStatusCode.Unauthorized.description("Отсутствует приложение с таким appId"),
-                gen = { _:UnknownAppIDException -> return@throws "Отсутствует приложение с таким appId" }
+                example = "Отсутствует приложение с таким appId",
+                    UnknownAppIDException::class
             ) {
                     post<Unit, KeyDevice, NewMobile>(
                         info(
@@ -64,7 +67,8 @@ fun Application.appRouting(){
                     }
                     throws(
                         status = HttpStatusCode.NotFound.description("Отсутствуют устройства с данным appId"),
-                        gen = {_: BadAppIdException-> return@throws "Отсутствуют устройства с данным appId" }
+                        example = "Отсутствуют устройства с данным appId",
+                            BadAppIdException::class
                     ).get<AppId, List<NewMobile>>(
                         info(
                             summary = "Получение списка устройств участника"

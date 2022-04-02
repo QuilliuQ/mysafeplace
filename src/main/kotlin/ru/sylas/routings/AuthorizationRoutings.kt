@@ -1,33 +1,38 @@
 package ru.sylas.routings
 
-import com.fasterxml.jackson.module.kotlin.MissingKotlinParameterException
 import com.papsign.ktor.openapigen.route.*
+import com.papsign.ktor.openapigen.route.path.normal.get
 import com.papsign.ktor.openapigen.route.path.normal.post
 import com.papsign.ktor.openapigen.route.response.respond
 import io.ktor.application.*
 import io.ktor.http.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.myApiRouting
-import ru.sylas.exceptions.UnauthorizedException
-import ru.sylas.exceptions.UserAlreadyCreatedException
 import ru.sylas.common.Tag
+import ru.sylas.exceptions.*
+import ru.sylas.model.dataclass.ErrorEx
 import ru.sylas.model.dataclass.UserToken
 import ru.sylas.model.requestdataclasses.*
 import ru.sylas.service.authorizationservice.AuthorizationService
 import java.util.*
 
-fun Application.authentificationRouting() {
+fun Application.authorizationRouting() {
 
     val service: AuthorizationService by inject()
 
 
     myApiRouting {
         tag(Tag.Auth) {
-            route("/auth") {
+            throws(
+                status = HttpStatusCode.Unauthorized.description("KeyDevice не зарегистрирован"),
+                example = ErrorEx("KeyDevice не зарегистрирован"),
+                BadKeyDeviceException::class
+            ).route("/auth") {
                 route("/register") {
                     throws(
                         status = HttpStatusCode.Conflict.description("Имя пользователя занято"),
-                        gen = { e: UserAlreadyCreatedException -> return@throws e.localizedMessage}
+                        example = ErrorEx("Имя пользователя занято"),
+                        UserAlreadyCreatedException::class
                     )
                         {
                         post<HeaderKeyDevice, UserToken, NewUser>(
@@ -50,17 +55,14 @@ fun Application.authentificationRouting() {
                     }
                 }
                 throws(
-                    status = HttpStatusCode.Unauthorized.description("Неправильный логин или пароль"),
-                    gen = { _: UnauthorizedException -> return@throws  "Неправильный логин или пароль"}
-                )
-                    .throws(
-                        status = HttpStatusCode.BadRequest.description("Пользователя не существует"),
-                        gen = { _: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
-                    ){
+                    status = HttpStatusCode.Forbidden.description("Неправильный логин или пароль"),
+                    example = ErrorEx("Неправильный логин или пароль"),
+                    BadCredentialsException::class
+                ){
                     route("/login") {
                         post<HeaderKeyDevice, UserToken, AuthUser>(
                             info(
-                                summary = "Авторизация пользователя"
+                                summary = "Авторизация пользователя c помощью email"
                             ),
                             exampleRequest = AuthUser("vasya@mail.com", password = "qwerty"),
                             exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
@@ -68,11 +70,19 @@ fun Application.authentificationRouting() {
                         { header, body ->
                             respond(service.authorization(body,header.toKeyDevice()))
                         }
-                    }
-                        route("/pin") {
-                            post<HeaderKeyDevice, UserToken, PinCode>(
+                    }}
+                    throws(
+                        status = HttpStatusCode.Unauthorized.description("Данное устройство не зарегистрировано пользователем"),
+                        example = ErrorEx("Данное устройство не зарегистрировано пользователем"),
+                        BadUserKeyDeviceException::class
+                    ).route("/pin") {
+                            throws(
+                                status = HttpStatusCode.Forbidden.description("Введден неверный пин код"),
+                                example = ErrorEx("Введден неверный пин код"),
+                                BadPinCodeException::class
+                            ).post<HeaderKeyDevice, UserToken, PinCode>(
                                 info(
-                                    summary = "Авторизация пользователя"
+                                    summary = "Авторизация пользователя c помощью Пин кода"
                                 ),
                                 exampleRequest = PinCode(1232),
                                 exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
@@ -80,11 +90,18 @@ fun Application.authentificationRouting() {
                             { header, pin ->
                                 respond(service.pinAuthorization(pin,header.toKeyDevice()))
                             }
+                            get<HeaderKeyDevice,PinCode>(
+                                info(
+                                    summary = "Генерация пин кода"
+                                ),
+                                example = PinCode(1232),
+                            ){header->
+                                respond(service.genPinCode(header.toKeyDevice()))
+                            }
                         }
                 }
                     }
                 }
             }
-        }
 
 

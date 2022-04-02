@@ -18,7 +18,7 @@ fun main() {
         configureApiGenerator()
         apiGeneratorRouter()
         appRouting()
-        authentificationRouting()
+        authorizationRouting()
         gameRouting()
         statsRouting()
         configureWatch()

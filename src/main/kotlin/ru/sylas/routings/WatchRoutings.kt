@@ -6,13 +6,13 @@ import com.papsign.ktor.openapigen.route.response.respond
 import com.papsign.ktor.openapigen.route.route
 import com.papsign.ktor.openapigen.route.tag
 import io.ktor.application.*
-import io.ktor.auth.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
 import ru.sylas.common.Utils.auth
 import ru.sylas.common.myApiRouting
 import ru.sylas.model.dataclass.PhoneUser
 import ru.sylas.model.dataclass.Stats
+import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.HeaderKeyDevice
 import ru.sylas.model.requestdataclasses.PinCode
 import ru.sylas.model.requestdataclasses.toKeyDevice
@@ -27,7 +27,7 @@ fun Application.configureWatch(){
         tag(Tag.Watch){
             auth{
                 route("/devices") {
-                    get<Unit, List<PhoneUser>,UserIdPrincipal>(
+                    get<Unit, List<PhoneUser>, AuthUser>(
                         info(
                             summary = "Получение подключенных к аккаунту устройств"
                         ),
@@ -37,7 +37,7 @@ fun Application.configureWatch(){
                     }
                     route("/pin")
                     {
-                        get<HeaderKeyDevice, PinCode,UserIdPrincipal>(
+                        get<HeaderKeyDevice, PinCode,AuthUser>(
                             info(
                                 "Получение пинкода авторизации для устройства"
                             ),
@@ -47,7 +47,7 @@ fun Application.configureWatch(){
                         }
                     }
                     route("/statistic") {
-                        get<HeaderKeyDevice, List<Stats>,UserIdPrincipal>(
+                        get<HeaderKeyDevice, List<Stats>,AuthUser>(
                             info(
                                 summary = "Получение статистики устройства"
                             )

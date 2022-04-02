@@ -4,13 +4,14 @@ package ru.sylas.service.gameservice
 import ru.sylas.model.dataclass.Games
 import ru.sylas.model.dataclass.GamesResponse
 import ru.sylas.model.requestdataclasses.GameType
+import ru.sylas.repository.game.GameRepository
 
-class GameServiceImpl:GameService {
+class GameServiceImpl(private val repository: GameRepository):GameService {
     override fun getGames(): List<GamesResponse> {
-        return emptyList()
+        return repository.getGames()
     }
 
     override fun getGame(id: GameType): Games {
-        return Games.NumberGame(GameType.Numbers, emptyList(), emptyList())
+        return repository.getGame(id)
     }
 }

@@ -1,14 +1,12 @@
 package ru.sylas.repository.auth
 
+import org.jetbrains.exposed.sql.and
 import ru.sylas.common.Hashing.sha256
 import ru.sylas.common.JWTConfig
 import ru.sylas.common.Utils.guard
 import ru.sylas.common.Utils.loggedTransaction
 import ru.sylas.common.upsert
-import ru.sylas.exceptions.BadCredentialsException
-import ru.sylas.exceptions.BadKeyDeviceException
-import ru.sylas.exceptions.BadUserKeyDeviceException
-import ru.sylas.exceptions.UserAlreadyCreatedException
+import ru.sylas.exceptions.*
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.dataclass.UserToken
 import ru.sylas.model.requestdataclasses.AuthUser
@@ -18,6 +16,7 @@ import ru.sylas.model.tables.app.KeyDeviceT
 import ru.sylas.model.tables.auth.Token
 import ru.sylas.model.tables.auth.UserKeyDevice
 import ru.sylas.model.tables.auth.UserTable
+import ru.sylas.model.tables.pincode.PinCodeT
 import ru.sylas.model.tablesDAO.app.KeyDeviceDao
 import ru.sylas.model.tablesDAO.auth.TokenDao
 import ru.sylas.model.tablesDAO.auth.UserKeyDeviceDao
@@ -26,7 +25,6 @@ import ru.sylas.model.tablesDAO.auth.toUserToken
 import ru.sylas.model.tablesDAO.pincode.PinCodeDao
 import ru.sylas.model.tablesDAO.pincode.generatePinCode
 import ru.sylas.model.tablesDAO.pincode.toPinCode
-import kotlin.random.Random
 
 class AuthorizationRepositoryImpl: AuthorizationRepository {
 
@@ -96,19 +94,20 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
 
 
     override fun pinAuthorization(pin: PinCode, keyDevice: KeyDevice): UserToken {
-        TODO("Not yet implemented")
+         return loggedTransaction{
+            val useKeyDeviceDB  =  getUserKeyDevice(keyDevice)
+            val pinDB = PinCodeDao.find { PinCodeT.pinCode eq pin.pinCode and (PinCodeT.userKeyDeviceId eq useKeyDeviceDB.id) }
+                .firstOrNull().guard {
+                    throw BadPinCodeException()
+                }
+             pinDB.delete()
+             TokenDao.find{ Token.userKeyDeviceId eq useKeyDeviceDB.id }.first().toUserToken()
+        }
     }
 
     override fun genPinCode(keyDevice: KeyDevice): PinCode {
         return loggedTransaction {
-            val keyDeviceDB =
-                KeyDeviceDao.find { KeyDeviceT.keyDevice eq keyDevice.keyDevice }.firstOrNull().guard {
-                    throw BadKeyDeviceException()
-                }
-            val userKeyDeviceDB = UserKeyDeviceDao.find{ UserKeyDevice.keyDeviceId eq keyDeviceDB.id}.firstOrNull().guard {
-                //данное устройство не авторизвано ниодном пользователем
-                throw BadUserKeyDeviceException()
-            }
+            val userKeyDeviceDB = getUserKeyDevice(keyDevice)
             PinCodeDao.new {
                 this.pinCode = generatePinCode()
                 this.userKeyDeviceId = userKeyDeviceDB
@@ -117,5 +116,17 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
     }
 }
 
+fun getKeyDevice(keyDevice:KeyDevice) = KeyDeviceDao
+    .find { KeyDeviceT.keyDevice eq keyDevice.keyDevice }
+    .firstOrNull()
+    .guard {
+    throw BadKeyDeviceException()
+}
 
-
+fun getUserKeyDevice(keyDevice: KeyDevice) :UserKeyDeviceDao {
+    val keyDeviceDB = getKeyDevice(keyDevice)
+    return UserKeyDeviceDao.find{ UserKeyDevice.keyDeviceId eq keyDeviceDB.id}.firstOrNull().guard {
+        //данное устройство не авторизвано ниодном пользователем
+        throw BadUserKeyDeviceException()
+    }
+}

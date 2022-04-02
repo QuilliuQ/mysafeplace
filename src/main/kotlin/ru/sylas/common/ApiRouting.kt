@@ -9,6 +9,7 @@ import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.routing.*
 import ru.sylas.exceptions.HellException
+import ru.sylas.model.dataclass.ErrorEx
 
 fun Application.myApiRouting(config: NormalOpenAPIRoute.() -> Unit) {
     routing {
@@ -17,13 +18,15 @@ fun Application.myApiRouting(config: NormalOpenAPIRoute.() -> Unit) {
             application.feature(OpenAPIGen).globalModuleProvider
         ).throws(
             status = HttpStatusCode.BadRequest.description("Проверьте корректность запроса"),
-            gen = { _: MissingKotlinParameterException -> return@throws "Проверьте корректность запроса" }
+            gen = {_:MissingKotlinParameterException -> return@throws  "Проверьте корректность запроса" }
         ).throws(
             status = HttpStatusCode.BadRequest.description("Проверьте корректность запроса"),
-            gen = { _: JacksonException -> return@throws "Проверьте корректность запроса" }
+            example = ErrorEx("Проверьте корректность запроса"),
+            JacksonException::class
         ).throws(
             status = HttpStatusCode.InternalServerError.description("Внутренная ошибка сервера"),
-            gen = { _: HellException -> return@throws "Внутренная ошибка сервера" }
+            example = ErrorEx("Внутренная ошибка сервера"),
+            HellException::class
         )
             .apply(config)
     }

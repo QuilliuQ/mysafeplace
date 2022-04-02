@@ -7,5 +7,5 @@ import ru.sylas.model.requestdataclasses.GameType
 data class GamesResponse(
     val type: GameType,
     val image:String,
-    val size: Int
+    val size: GameSize
 )

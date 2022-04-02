@@ -9,6 +9,5 @@ enum class GameType {
         Numbers,
         Animals,
         House,
-        Cars,
-        TV
+        Cars
 }
