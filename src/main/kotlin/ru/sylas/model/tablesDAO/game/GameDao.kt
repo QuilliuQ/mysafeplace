@@ -14,7 +14,7 @@ class GameDao(id : EntityID<Int>):IntEntity(id) {
 
     var type by GameTypeDao referencedOn GameT.type
     var image by GameT.image
-    var size by SizeDao referencedOn GameT.size
+    var size by GameSizeDao referencedOn GameT.size
 }
 
 fun List<GameDao>.toGameList() =

@@ -35,7 +35,6 @@ fun Application.gameRouting(){
                        ),
                        example = listOf(GamesResponse(GameType.Numbers,"image.png",GameSize.Small))
                    ) {
-
                        respond(service.getGames())
                    }
                }

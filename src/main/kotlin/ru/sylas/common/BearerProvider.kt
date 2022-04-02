@@ -12,8 +12,8 @@ import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.http.*
 import io.ktor.util.pipeline.*
-import ru.sylas.exceptions.ForbiddenException
 import ru.sylas.exceptions.UnauthorizedException
+import ru.sylas.model.dataclass.ErrorEx
 import ru.sylas.model.requestdataclasses.AuthUser
 
 
@@ -37,20 +37,20 @@ object BearerProvider : AuthProvider<AuthUser> {
         )
 
     override suspend fun getAuth(pipeline: PipelineContext<Unit, ApplicationCall>): AuthUser {
+
         return pipeline.context.authentication.principal()
-            ?: throw UnauthorizedException("Unable to verify given credentials, or credentials are missing.")
+            ?: throw UnauthorizedException("Неавторизованый доступ")
     }
 
 
     override fun apply(route: NormalOpenAPIRoute): OpenAPIAuthenticatedRoute<AuthUser> {
-        return OpenAPIAuthenticatedRoute(route.ktorRoute.authenticate("auth-jwt") { }, route.provider.child(), this)
+        return OpenAPIAuthenticatedRoute(route.ktorRoute.authenticate("auth-jwt") {
+
+        }, route.provider.child(), this)
             .throws(
-                status = HttpStatusCode.Unauthorized.description("Your identity could not be verified."),
-                gen = { e: UnauthorizedException -> return@throws e.localizedMessage }
-            )
-            .throws(
-                status = HttpStatusCode.Forbidden.description("Your access rights are insufficient."),
-                gen = { e: ForbiddenException -> return@throws e.localizedMessage }
+                status = HttpStatusCode.Unauthorized.description("Неавторизованый доступ"),
+                example = ErrorEx("Неавторизованный доступ"),
+                UnauthorizedException::class
             )
     }
 }

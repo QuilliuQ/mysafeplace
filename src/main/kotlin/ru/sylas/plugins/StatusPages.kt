@@ -4,6 +4,7 @@ import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*
 import io.ktor.response.*
+import ru.sylas.exceptions.UnauthorizedException
 import ru.sylas.model.dataclass.ErrorEx
 
 fun Application.configureStatusPages() {
@@ -13,6 +14,9 @@ fun Application.configureStatusPages() {
             }
             status(HttpStatusCode.InternalServerError){
                 call.respond(HttpStatusCode.InternalServerError, ErrorEx("Внутренная ошибка сервера"))
+            }
+            exception<UnauthorizedException> {
+                call.respond(HttpStatusCode.Unauthorized,ErrorEx("Неавторизованный доступ"))
             }
         }
 }

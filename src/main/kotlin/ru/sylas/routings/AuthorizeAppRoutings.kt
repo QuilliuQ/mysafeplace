@@ -51,7 +51,7 @@ fun Application.appRouting(){
                 }
             route("/mobile") {
                 throws(
-                status = HttpStatusCode.Unauthorized.description("Отсутствует приложение с таким appId"),
+                status = HttpStatusCode.BadRequest.description("Отсутствует приложение с таким appId"),
                 example = "Отсутствует приложение с таким appId",
                     UnknownAppIDException::class
             ) {

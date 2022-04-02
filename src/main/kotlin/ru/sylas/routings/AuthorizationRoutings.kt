@@ -24,7 +24,7 @@ fun Application.authorizationRouting() {
     myApiRouting {
         tag(Tag.Auth) {
             throws(
-                status = HttpStatusCode.Unauthorized.description("KeyDevice не зарегистрирован"),
+                status = HttpStatusCode.BadRequest.description("KeyDevice не зарегистрирован"),
                 example = ErrorEx("KeyDevice не зарегистрирован"),
                 BadKeyDeviceException::class
             ).route("/auth") {
@@ -47,7 +47,7 @@ fun Application.authorizationRouting() {
                             ),
                             exampleResponse = UserToken(
                                 userId = UUID.randomUUID(),
-                                "sha256"
+                                "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InN5bGFzLndzciIsInNlY3JldCI6IjY1ZTg0YmUzMzUzMmZiNzg0YzQ4MTI5Njc1ZjllZmYzYTY4MmIyNzE2OGMwZWE3NDRiMmNmNThlZTAyMzM3YzUifQ.HxDLqCyvwiSsPKuTGdmUkn6eluO159LH5-Ksv_AgBQ_QYyZ5uCQaF5oFGjViGeGSD9YSZoDUTPXkqrvMfYz9Uw"
                             )
                         ) { header, body ->
                             respond(service.registration(body,header.toKeyDevice()))
@@ -55,7 +55,7 @@ fun Application.authorizationRouting() {
                     }
                 }
                 throws(
-                    status = HttpStatusCode.Forbidden.description("Неправильный логин или пароль"),
+                    status = HttpStatusCode.Unauthorized.description("Неправильный логин или пароль"),
                     example = ErrorEx("Неправильный логин или пароль"),
                     BadCredentialsException::class
                 ){
@@ -65,19 +65,22 @@ fun Application.authorizationRouting() {
                                 summary = "Авторизация пользователя c помощью email"
                             ),
                             exampleRequest = AuthUser("vasya@mail.com", password = "qwerty"),
-                            exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
+                            exampleResponse = UserToken(
+                                userId = UUID.randomUUID(),
+                                "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InN5bGFzLndzciIsInNlY3JldCI6IjY1ZTg0YmUzMzUzMmZiNzg0YzQ4MTI5Njc1ZjllZmYzYTY4MmIyNzE2OGMwZWE3NDRiMmNmNThlZTAyMzM3YzUifQ.HxDLqCyvwiSsPKuTGdmUkn6eluO159LH5-Ksv_AgBQ_QYyZ5uCQaF5oFGjViGeGSD9YSZoDUTPXkqrvMfYz9Uw"
+                            )
                         )
                         { header, body ->
                             respond(service.authorization(body,header.toKeyDevice()))
                         }
                     }}
                     throws(
-                        status = HttpStatusCode.Unauthorized.description("Данное устройство не зарегистрировано пользователем"),
+                        status = HttpStatusCode.BadRequest.description("Данное устройство не зарегистрировано пользователем"),
                         example = ErrorEx("Данное устройство не зарегистрировано пользователем"),
                         BadUserKeyDeviceException::class
                     ).route("/pin") {
                             throws(
-                                status = HttpStatusCode.Forbidden.description("Введден неверный пин код"),
+                                status = HttpStatusCode.Unauthorized.description("Введден неверный пин код"),
                                 example = ErrorEx("Введден неверный пин код"),
                                 BadPinCodeException::class
                             ).post<HeaderKeyDevice, UserToken, PinCode>(
@@ -85,7 +88,7 @@ fun Application.authorizationRouting() {
                                     summary = "Авторизация пользователя c помощью Пин кода"
                                 ),
                                 exampleRequest = PinCode(1232),
-                                exampleResponse = UserToken(userId = UUID.randomUUID(), "sha256")
+                                exampleResponse = UserToken(userId = UUID.randomUUID(), "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImlzcyI6InN5bGFzLndzciIsInNlY3JldCI6IjY1ZTg0YmUzMzUzMmZiNzg0YzQ4MTI5Njc1ZjllZmYzYTY4MmIyNzE2OGMwZWE3NDRiMmNmNThlZTAyMzM3YzUifQ.HxDLqCyvwiSsPKuTGdmUkn6eluO159LH5-Ksv_AgBQ_QYyZ5uCQaF5oFGjViGeGSD9YSZoDUTPXkqrvMfYz9Uw")
                             )
                             { header, pin ->
                                 respond(service.pinAuthorization(pin,header.toKeyDevice()))

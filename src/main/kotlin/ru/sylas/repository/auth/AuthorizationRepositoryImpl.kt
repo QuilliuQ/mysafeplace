@@ -46,7 +46,7 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
 
                 TokenDao.upsert(Token.userId, userDB.id, Token.userKeyDeviceId, userKey.id) {
                     this.userId = userDB
-                    this.accessToken = JWTConfig.generateToken(userDB.secret)
+                    this.accessToken = JWTConfig.generateToken(userDB)
                     this.userKeyDeviceId = userKey
                 }.toUserToken()
             } else {
@@ -77,7 +77,7 @@ class AuthorizationRepositoryImpl: AuthorizationRepository {
 
                 TokenDao.new {
                     this.userId = userDB
-                    this.accessToken = JWTConfig.generateToken(userDB.secret)
+                    this.accessToken = JWTConfig.generateToken(userDB)
                     this.userKeyDeviceId = userKey
                 }.toUserToken()
             }

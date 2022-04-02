@@ -11,7 +11,7 @@ import ru.sylas.model.tables.auth.UserKeyDevice
 import ru.sylas.model.tables.auth.UserTable
 import ru.sylas.model.tables.game.GameT
 import ru.sylas.model.tables.game.GameTypeT
-import ru.sylas.model.tables.game.SizeGameImage
+import ru.sylas.model.tables.game.GameSizeT
 import ru.sylas.model.tables.pincode.PinCodeT
 import ru.sylas.model.tables.stats.StatsT
 import ru.sylas.model.tables.stats.UserStat
@@ -24,6 +24,6 @@ fun configureDatabase() {
         url = "jdbc:postgresql://localhost:5432/wsr"
     )
     transaction {
-        SchemaUtils.create (App, Mobile,KeyDeviceT,Token,UserKeyDevice,UserTable,GameT,GameTypeT,SizeGameImage,PinCodeT,StatsT,UserStat)
+        SchemaUtils.create (App, Mobile,KeyDeviceT,Token,UserKeyDevice,UserTable,GameT,GameTypeT,GameSizeT,PinCodeT,StatsT,UserStat)
     }
 }
