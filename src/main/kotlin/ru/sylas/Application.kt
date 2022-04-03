@@ -19,9 +19,9 @@ fun main() {
         apiGeneratorRouter()
         appRouting()
         authorizationRouting()
-        gameRouting()
-        statsRouting()
+//        gameRouting()
+//        statsRouting()
         configureWatch()
-        configureTVRouting()
+//        configureTVRouting()
     }.start(wait = true)
 }

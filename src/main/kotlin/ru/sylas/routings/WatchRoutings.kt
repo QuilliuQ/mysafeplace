@@ -5,13 +5,18 @@ import com.papsign.ktor.openapigen.route.path.auth.get
 import com.papsign.ktor.openapigen.route.response.respond
 import com.papsign.ktor.openapigen.route.route
 import com.papsign.ktor.openapigen.route.tag
+import com.papsign.ktor.openapigen.route.throws
 import io.ktor.application.*
+import io.ktor.http.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
 import ru.sylas.common.Utils.auth
 import ru.sylas.common.myApiRouting
+import ru.sylas.exceptions.BadKeyDeviceException
+import ru.sylas.model.dataclass.ErrorEx
 import ru.sylas.model.dataclass.PhoneUser
 import ru.sylas.model.dataclass.Stats
+import ru.sylas.model.dataclass.WatchStats
 import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.HeaderKeyDevice
 import ru.sylas.model.requestdataclasses.PinCode
@@ -35,6 +40,12 @@ fun Application.configureWatch(){
                     ) {
                         respond(service.getDevices())
                     }
+                    throws(
+                        status = HttpStatusCode.BadRequest.description("KeyDevice не зарегистрирован"),
+                        example = ErrorEx("KeyDevice не зарегистрирован"),
+                        BadKeyDeviceException::class
+                    ){
+
                     route("/pin")
                     {
                         get<HeaderKeyDevice, PinCode,AuthUser>(
@@ -47,13 +58,15 @@ fun Application.configureWatch(){
                         }
                     }
                     route("/statistic") {
-                        get<HeaderKeyDevice, List<Stats>,AuthUser>(
+                        get<HeaderKeyDevice, List<WatchStats>,AuthUser>(
                             info(
                                 summary = "Получение статистики устройства"
-                            )
+                            ),
+                            example = listOf(WatchStats("Цифра",24))
                         ) { key ->
                             respond(service.getStats(key.toKeyDevice()))
                         }
+                    }
                     }
 
                 }

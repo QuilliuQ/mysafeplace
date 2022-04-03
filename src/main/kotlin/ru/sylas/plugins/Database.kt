@@ -14,6 +14,7 @@ import ru.sylas.model.tables.game.*
 import ru.sylas.model.tables.pincode.PinCodeT
 import ru.sylas.model.tables.stats.StatsT
 import ru.sylas.model.tables.stats.UserStatT
+import ru.sylas.model.tables.watch.WatchKeysT
 
 fun configureDatabase() {
     Database.connect(
@@ -42,7 +43,7 @@ fun configureDatabase() {
             PinCodeT,
             StatsT,
             UserStatT,
-
+            WatchKeysT
         )
         generateDBConstants()
     }

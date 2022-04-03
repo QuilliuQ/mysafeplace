@@ -22,6 +22,6 @@ fun PinCodeDao.toPinCode() =
         pinCode = pinCode
     )
 
-fun PinCodeDao.generatePinCode(): Int {
+fun generatePinCode(): Int {
     return Random.nextInt(1001,9999)
 }
