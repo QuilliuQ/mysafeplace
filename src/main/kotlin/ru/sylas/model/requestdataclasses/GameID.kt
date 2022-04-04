@@ -8,6 +8,8 @@ data class GameID(@QueryParam("Имя конкретной игры") val name: 
 enum class GameType {
         Numbers,
         Animals,
-//        House,
-//        Cars
+        House,
+        Cars,
+        Bees
+
 }

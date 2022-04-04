@@ -26,7 +26,8 @@ fun List<GameDao>.toGameList() =
 fun GameDao.toGamesResponse() = GamesResponse (
         type = getType(this.type.type),
         image = this.image,
-        size = getSize(this.size.size)
+        size = getSize(this.size.size),
+        locked = false
         )
 
 fun getSize(size: String): GameSize {

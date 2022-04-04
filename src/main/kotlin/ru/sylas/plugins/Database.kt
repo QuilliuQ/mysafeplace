@@ -17,18 +17,19 @@ import ru.sylas.model.tables.stats.StatsT
 import ru.sylas.model.tables.stats.UserStatT
 import ru.sylas.model.tables.watch.WatchKeysT
 
-//
-//user = "postgres",
-//password = "Rfnzvbcfqkj1",
-//url = "jdbc:postgresql://localhost:5432/wsr"
+
+
 
 
 fun configureDatabase() {
     Database.connect(
         driver = "org.postgresql.Driver",
-        user = "developuser",
-        password = "develop",
-        url = "jdbc:postgresql://192.168.51.3:5432/wsr"
+        user = "postgres",
+        password = "Rfnzvbcfqkj1",
+        url = "jdbc:postgresql://localhost:5432/wsr"
+//        user = "developuser",
+//        password = "develop",
+//        url = "jdbc:postgresql://192.168.51.3:5432/wsr"
     )
     transaction {
         SchemaUtils.create(

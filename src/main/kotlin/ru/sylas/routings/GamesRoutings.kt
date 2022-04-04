@@ -7,17 +7,22 @@ import com.papsign.ktor.openapigen.route.*
 import com.papsign.ktor.openapigen.route.path.auth.get
 import com.papsign.ktor.openapigen.route.response.respond
 import io.ktor.application.*
+import io.ktor.features.*
+import io.ktor.http.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.Utils.auth
 import ru.sylas.common.myApiRouting
 import ru.sylas.common.Tag
+import ru.sylas.exceptions.ForbiddenException
 import ru.sylas.model.dataclass.*
 import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.GameID
 import ru.sylas.model.requestdataclasses.GameType
 import ru.sylas.model.tables.game.animals.AninalGameT.sounds
+import ru.sylas.model.tablesDAO.game.getSize
 import ru.sylas.repository.game.genAni
 import ru.sylas.service.gameservice.GameService
+import kotlin.random.Random
 
 
 fun Application.gameRouting(){
@@ -32,13 +37,17 @@ fun Application.gameRouting(){
                        info(
                            summary = "Получение списка игр"
                        ),
-                       example = listOf(GamesResponse(GameType.Numbers,"image.png",GameSize.Small))
+                       example = listOf(GamesResponse(GameType.Numbers,"image.png",GameSize.Small,false))
                    ) {
-                       respond(service.getGames())
+                       respond(genMenu())
+
                    }
                }
                    route("/game") {
-                   this.get<GameID, Games, AuthUser>(
+                       throws(HttpStatusCode.Forbidden.description("данная игра вам недоступна"),
+                           example = ErrorEx("Данная игра вам недоступна"),
+                           ForbiddenException::class
+                       ).get<GameID, Games, AuthUser>(
                        info(
                            summary = "Получение конкретной игры"
                        ),
@@ -51,8 +60,7 @@ fun Application.gameRouting(){
 
                        respond(when(id.name){
                            GameType.Numbers -> getNumbers()
-                           GameType.Animals -> genAnimals()
-
+                           else -> throw ForbiddenException("Данная игра вам недоступна")
                        })
                    }
                }
@@ -63,8 +71,42 @@ fun Application.gameRouting(){
         }
     }
 
+fun genMenu(): List<GamesResponse> {
+    return listOf(
+        GamesResponse(
+            type = GameType.Numbers,
+            image = "images/menu/numbers.png",
+            size = genSize(),
+            locked = false
+        ),
+        GamesResponse(
+            type = GameType.Animals,
+            image = "images/menu/animals.png",
+            size = genSize(),
+            locked = false
+        ),           GamesResponse(
+            type = GameType.House,
+            image = "images/menu/house.png",
+            size = genSize(),
+            locked = true
+        ),        GamesResponse(
+            type = GameType.Cars,
+            image = "images/menu/cars.png",
+            size = genSize(),
+            locked = true
+        ),        GamesResponse(
+            type = GameType.Bees,
+            image = "images/menu/bees.png",
+            size = genSize(),
+            locked = true
+        ),
+    )
 
+}
 
+fun genSize(): GameSize {
+    return GameSize.values().random()
+}
 
 
 fun getNumbers():Games{

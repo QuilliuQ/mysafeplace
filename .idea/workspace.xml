@@ -4,63 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + game+ bearer xz first session">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SoundsT.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/animals/AninalGameT.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/SoundsDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/animal/AnimalsDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/cat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/chicken.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/cow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/dog.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/donkey.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/duck.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/frog.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/goat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/animals/pig.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/numbers/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/cat.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/chicken.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/cow.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/dog.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/donkey.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/duck.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/frog.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/goat.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/animals/pig.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/eight.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/five.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/four.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/nine.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/one.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/seven.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/six.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/ten.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/three.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/two.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/sounds/numbers/zero.mp3" afterDir="false" />
+    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + game+ bearer xz first session+game">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/menu/animals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/menu/bees.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/menu/cars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/menu/house.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/menu/numbers.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/GenerateDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/GenerateDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/common/Utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/Games.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/Games.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/GamesResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/GamesResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/requestdataclasses/GameID.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/requestdataclasses/GameID.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SourceT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/game/SourceT.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/game/GameDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/game/GameRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/game/GameRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/watch/WatchRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/watch/WatchRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/StaticRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/StaticRoutings.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,11 +81,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/files/images/menu" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/images/animals" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/sounds/animals" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/sounds/numbers" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/sounds" />
-      <recent name="$PROJECT_DIR$/src/main/resources/files/images/numbers" />
     </key>
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="ru.sylas.model.tables.game" />
@@ -177,7 +132,7 @@
       <workItem from="1648899241931" duration="624000" />
       <workItem from="1648900309505" duration="1000" />
       <workItem from="1648943272332" duration="250000" />
-      <workItem from="1649002343894" duration="15690000" />
+      <workItem from="1649002343894" duration="17682000" />
     </task>
     <task id="LOCAL-00001" summary="restore dao table">
       <created>1648750670099</created>
@@ -228,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649005326500</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test app auth + game+ bearer xz first session+game">
+      <created>1649095075318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649095075318</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +216,8 @@
     <MESSAGE value="test app auth + game+ bearer" />
     <MESSAGE value="test app auth + game+ bearer xz" />
     <MESSAGE value="test app auth + game+ bearer xz first session" />
-    <option name="LAST_COMMIT_MESSAGE" value="test app auth + game+ bearer xz first session" />
+    <MESSAGE value="test app auth + game+ bearer xz first session+game" />
+    <option name="LAST_COMMIT_MESSAGE" value="test app auth + game+ bearer xz first session+game" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
