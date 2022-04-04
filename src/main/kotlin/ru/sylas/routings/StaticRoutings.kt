@@ -6,7 +6,8 @@ import io.ktor.routing.*
 
 fun Application.configureStaticRouting() {
     routing {
-        static("/api/images") {
+
+        static {
             resources("files")
         }
     }

@@ -42,8 +42,6 @@ fun getType(type:String):GameType{
     return when(type){
         "Numbers"-> GameType.Numbers
         "Animals" -> GameType.Animals
-        "House"-> GameType.House
-        "Cars"-> GameType.Cars
         else -> throw HellException("Unknown Type")
     }
 }

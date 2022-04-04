@@ -1,12 +1,10 @@
 package ru.sylas.repository.watch
 
-import org.postgresql.core.Utils
 import ru.sylas.common.Utils.guard
 import ru.sylas.common.Utils.loggedTransaction
 import ru.sylas.exceptions.BadKeyDeviceException
 import ru.sylas.model.dataclass.KeyDevice
 import ru.sylas.model.dataclass.PhoneUser
-import ru.sylas.model.dataclass.Stats
 import ru.sylas.model.dataclass.WatchStats
 import ru.sylas.model.requestdataclasses.GameType
 import ru.sylas.model.requestdataclasses.PinCode
@@ -19,7 +17,7 @@ import kotlin.random.Random
 
 class WatchRepositoryImpl:WatchRepository {
     override fun getDevices(): List<PhoneUser> {
-        return ru.sylas.common.Utils.loggedTransaction {
+        return loggedTransaction {
             WatchKeysDao.all().toList().map {
                 it.toPhoneUser()
             }

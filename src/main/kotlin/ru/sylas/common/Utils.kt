@@ -18,9 +18,9 @@ object Utils {
         return BearerProvider.apply(this).apply(route)
     }
 
-    fun <T> loggedTransaction(statement: Transaction.() -> T): T  = transaction {
+    fun <T> loggedTransaction(statement: (Transaction) -> T):T  = transaction {
         addLogger(StdOutSqlLogger)
-        statement()
+        statement(this)
     }
 
 }
