@@ -20,7 +20,10 @@ fun Application.configureApiGenerator(){
 //            }
         }
         // describe the server, add as many as you want
-        server("http://0.0.0.0:8080") {
+        server(
+//            "http://0.0.0.0:8080"
+                "http://wsr.sylas.ru"
+        ) {
 
         }
         //optional custom schema object namer

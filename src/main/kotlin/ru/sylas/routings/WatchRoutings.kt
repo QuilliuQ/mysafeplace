@@ -7,6 +7,8 @@ import com.papsign.ktor.openapigen.route.route
 import com.papsign.ktor.openapigen.route.tag
 import com.papsign.ktor.openapigen.route.throws
 import io.ktor.application.*
+import io.ktor.auth.*
+import io.ktor.auth.jwt.*
 import io.ktor.http.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
@@ -38,6 +40,7 @@ fun Application.configureWatch(){
                         ),
                         example = listOf(PhoneUser("qwerdsa134ed", "Xiaomi Mi A3 Vitaliy"))
                     ) {
+                        (this.pipeline.call.authentication.principal as JWTPayloadHolder).payload.getClaim("secret")
                         respond(service.getDevices())
                     }
                     throws(

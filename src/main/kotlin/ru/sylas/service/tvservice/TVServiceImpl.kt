@@ -2,24 +2,22 @@ package ru.sylas.service.tvservice
 
 import ru.sylas.model.dataclass.*
 import ru.sylas.model.requestdataclasses.NewTV
+import ru.sylas.model.tables.tv.TV
+import ru.sylas.repository.tv.TVRepository
+import ru.sylas.repository.tv.TVRepositoryImpl
 
-class TVServiceImpl:TVService {
-    override fun getMovie(): Movie {
-        return Movie("video.mp4", listOf(Sector(
-            "stage1.mp4",
-            listOf(Option("",true))
-        )))
-    }
+class TVServiceImpl(private val repository:TVRepository):TVService {
+
 
     override fun sendStat(key: KeyDevice, stat: TVStats) {
-
+        repository.sendStat(key,stat)
     }
 
-    override fun getStat(): List<Statistic> {
-        return emptyList()
+    override fun getStat(): List<TVStats> {
+        return repository.getStat()
     }
 
     override fun regApp(newTV: NewTV): KeyDevice {
-        return KeyDevice("1fsdaf")
+       return repository.regMobile(newTV)
     }
 }

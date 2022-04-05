@@ -58,6 +58,8 @@ fun Application.gameRouting(){
                            GameType.Numbers -> getNumbers()
                            GameType.Animals -> genAnimals()
                            GameType.House -> genHouse()
+                           GameType.Cars -> genCars()
+                           GameType.Bees -> genBees()
                            else -> throw ForbiddenException("Данная игра вам недоступна")
                        })
                    }
@@ -69,6 +71,80 @@ fun Application.gameRouting(){
         }
     }
 
+fun genBees(): Games {
+ val listc = listOf(
+
+     Source(
+     "images/bees/one.png",
+     "one"
+ ),
+     Source(
+     "images/bees/two.png",
+     "two"
+ ),
+     Source(
+     "images/bees/three.png",
+     "three"
+ ),
+     Source(
+     "images/bees/four.png",
+     "four"
+ ),
+     Source(
+     "images/bees/five.png",
+     "five"
+ ),
+     Source(
+     "images/bees/six.png",
+     "six"
+ ),
+     Source(
+     "images/bees/seven.png",
+     "seven"
+ ),
+ )
+    val lita = listc.shuffled().take(4)
+    val corr = CorrespondingB(
+        bees = lita,
+        petalCount = lita.map {
+            getId(it.id)
+        }.shuffled()
+    )
+    return Games.BeesGame(
+        type = GameType.Bees,
+        correspondings = corr
+    )
+}
+
+fun getId(id: String) : Int {
+    return when(id){
+        "one"-> 1
+        "two"-> 2
+        "three"-> 3
+        "four"-> 4
+        "five"-> 5
+        "six"-> 6
+        "seven"-> 7
+        else -> 1
+    }
+}
+
+fun genCars(): Games {
+    val listc = listOf(
+        Correspond(1,"red"),
+        Correspond(2,"purple"),
+        Correspond(3,"yellow"),
+    )
+    val list = CorrespondingC(
+        trucks = listc.shuffled(),
+        cars = listc.shuffled()
+    )
+    return Games.CarsGame(
+        type = GameType.Cars,
+        correspondings = list
+    )
+}
+
 fun genHouse(): Games {
     val listc = listOf(
         Correspond(1,"circle"),
@@ -76,12 +152,12 @@ fun genHouse(): Games {
         Correspond(3,"triangle"),
         Correspond(4,"square"),
     )
-    val list = listOf(
+    val list =
         Corresponding(
             figures = listc.shuffled(),
             houses = listc.shuffled()
         )
-    )
+
  return Games.HouseGame(
      type = GameType.House,
         correspondings = list

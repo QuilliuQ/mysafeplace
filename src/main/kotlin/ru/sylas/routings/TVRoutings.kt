@@ -9,9 +9,11 @@ import com.papsign.ktor.openapigen.route.tag
 import com.papsign.ktor.openapigen.route.throws
 import io.ktor.application.*
 import io.ktor.http.*
+import org.koin.ktor.ext.get
 import org.koin.ktor.ext.inject
 import ru.sylas.common.Tag
 import ru.sylas.common.myApiRouting
+import ru.sylas.exceptions.BadKeyDeviceException
 import ru.sylas.exceptions.HellException
 import ru.sylas.model.dataclass.*
 import ru.sylas.model.requestdataclasses.HeaderKeyDevice
@@ -26,12 +28,12 @@ fun Application.configureTVRouting(){
 
     myApiRouting {
         tag(Tag.TV){
-            throws(
-                status = HttpStatusCode.InternalServerError.description("Проблемы при регистрации"),
-                gen = { e: HellException -> return@throws e.localizedMessage }
-            ){
+
             route("/tv"){
-                route("/app"){
+                throws(
+                    status = HttpStatusCode.InternalServerError.description("Проблемы при регистрации"),
+                    gen = { e: HellException -> return@throws e.localizedMessage }
+                ).route("/app"){
                     post<Unit, KeyDevice, NewTV>(
                         info(
                             summary = "Регистрация устройства"
@@ -47,25 +49,229 @@ fun Application.configureTVRouting(){
                         example = Movie("video.mp4", listOf(
                             Sector(
                             "stage1.mp4",
-                            listOf(Option("",true))
+                            listOf(Option("frog",true))
                         )
                         ))
                     ){
-                        respond(service.getMovie())
+                        respond(getMovie())
                     }
                 }
                 route("/statistic"){
-                    post<HeaderKeyDevice,Unit, TVStats>(
+                    throws(
+                        status = HttpStatusCode.BadRequest.description("KeyDevice не зарегистрирован"),
+                        example = ErrorEx("KeyDevice не зарегистрирован"),
+                        BadKeyDeviceException::class
+                    ).post<HeaderKeyDevice,ErrorEx, TVStats>(
                         info(
                             "Оптравка результата в статистику"
                         ),
                         exampleRequest = TVStats("Vasya",0,129)
                     ){key,stat->
-                        respond(service.sendStat(key.toKeyDevice(),stat))
+                        service.sendStat(key.toKeyDevice(),stat)
+                        respond(ErrorEx("OK"))
+                    }
+                    get<Unit,List<TVStats>>(
+                        info("Получение статистики")
+                    , example = listOf(TVStats("Vasya",0,129))
+                    ) {
+                        respond(service.getStat())
                     }
                 }
             }
             }
         }
     }
+
+
+fun getMovie(): Movie {
+
+    val sector = listOf(
+
+        Sector(
+            source = "/video/firstCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "dog",
+                    assert =false
+                ),
+                Option(
+                    source = "frog",
+                    assert = true
+                ),
+                Option(
+                    source = "zebra",
+                    assert = false
+                ),
+                Option(
+                    source = "pig",
+                    assert = false
+                ),
+                Option(
+                    source = "rat",
+                    assert =false
+                ),
+        )
+    ),
+        Sector(
+            source = "/video/twoCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "dino",
+                    assert = false
+                ),
+                Option(
+                    source = "duck",
+                    assert =false
+                ),
+                Option(
+                    source = "fish",
+                    assert = false
+                ),
+                Option(
+                    source = "rabbit",
+                    assert =true
+                ),
+                Option(
+                    source = "tiger",
+                    assert = false
+                ),
+        )
+    ),
+        Sector(
+            source = "/video/threeCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "bee",
+                    assert =false
+                ),
+                Option(
+                    source = "snail",
+                    assert =false
+                ),
+                Option(
+                    source = "pig",
+                    assert = true
+                ),
+                Option(
+                    source = "frog",
+                    assert = false
+                ),
+                Option(
+                    source = "dog2",
+                    assert = false
+                ),
+        )
+    ),
+        Sector(
+            source = "/video/fourCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "fish",
+                    assert =true
+                ),
+                Option(
+                    source = "snake",
+                    assert =false
+                ),
+                Option(
+                    source = "lion",
+                    assert = false
+                ),
+                Option(
+                    source = "turtle",
+                    assert = false
+                ),
+                Option(
+                    source = "elephant",
+                    assert = false
+                ),
+        )
+    ),
+        Sector(
+            source = "/video/fiveCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "frog",
+                    assert =false
+                ),
+                Option(
+                    source = "butterfly",
+                    assert = false
+                ),
+                Option(
+                    source = "rat",
+                    assert =false
+                ),
+                Option(
+                    source = "zebra",
+                    assert = false
+                ),
+                Option(
+                    source = "turtle",
+                    assert = true
+                ),
+        )
+    ),
+        Sector(
+            source = "/video/sixCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "snail",
+                    assert =false
+                ),
+                Option(
+                    source = "rabbit",
+                    assert =false
+                ),
+                Option(
+                    source = "fish",
+                    assert = false
+                ),
+                Option(
+                    source = "butterfly",
+                    assert = true
+                ),
+                Option(
+                    source = "tiger",
+                    assert = false
+                ),
+        )
+    ),
+        Sector(
+            source = "/video/sevenCut.mp4",
+            options = listOf(
+
+                Option(
+                    source = "duck",
+                    assert =false
+                ),
+                Option(
+                    source = "elephant",
+                    assert =true
+                ),
+                Option(
+                    source = "lion",
+                    assert = false
+                ),
+                Option(
+                    source = "bee",
+                    assert = false
+                ),
+                Option(
+                    source = "snake",
+                    assert = true
+                ),
+        )
+    ),
+    )
+    return Movie(
+        source = "/video/fulltv.mp4",
+        sector = sector
+    )
 }

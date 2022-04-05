@@ -15,6 +15,9 @@ import ru.sylas.model.tables.game.animals.AninalGameT
 import ru.sylas.model.tables.pincode.PinCodeT
 import ru.sylas.model.tables.stats.StatsT
 import ru.sylas.model.tables.stats.UserStatT
+import ru.sylas.model.tables.tv.TV
+import ru.sylas.model.tables.tv.TVStat
+import ru.sylas.model.tables.tv.TVkey
 import ru.sylas.model.tables.watch.WatchKeysT
 
 
@@ -24,12 +27,12 @@ import ru.sylas.model.tables.watch.WatchKeysT
 fun configureDatabase() {
     Database.connect(
         driver = "org.postgresql.Driver",
-        user = "postgres",
-        password = "Rfnzvbcfqkj1",
-        url = "jdbc:postgresql://localhost:5432/wsr"
-//        user = "developuser",
-//        password = "develop",
-//        url = "jdbc:postgresql://192.168.51.3:5432/wsr"
+//        user = "postgres",
+//        password = "Rfnzvbcfqkj1",
+//        url = "jdbc:postgresql://localhost:5432/wsr"
+        user = "developuser",
+        password = "develop",
+        url = "jdbc:postgresql://192.168.51.3:5432/wsr"
     )
     transaction {
         SchemaUtils.create(
@@ -53,7 +56,8 @@ fun configureDatabase() {
             UserStatT,
             WatchKeysT,
             AninalGameT,
-            SoundsT
+            SoundsT,
+            TV,TVStat,TVkey
         )
         generateDBConstants()
     }

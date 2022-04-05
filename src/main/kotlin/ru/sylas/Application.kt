@@ -22,6 +22,6 @@ fun main() {
         gameRouting()
         statsRouting()
 //        configureWatch()
-//        configureTVRouting()
+        configureTVRouting()
     }.start(wait = true)
 }
