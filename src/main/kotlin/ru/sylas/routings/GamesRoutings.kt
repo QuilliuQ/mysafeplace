@@ -7,7 +7,6 @@ import com.papsign.ktor.openapigen.route.*
 import com.papsign.ktor.openapigen.route.path.auth.get
 import com.papsign.ktor.openapigen.route.response.respond
 import io.ktor.application.*
-import io.ktor.features.*
 import io.ktor.http.*
 import org.koin.ktor.ext.inject
 import ru.sylas.common.Utils.auth
@@ -18,11 +17,8 @@ import ru.sylas.model.dataclass.*
 import ru.sylas.model.requestdataclasses.AuthUser
 import ru.sylas.model.requestdataclasses.GameID
 import ru.sylas.model.requestdataclasses.GameType
-import ru.sylas.model.tables.game.animals.AninalGameT.sounds
-import ru.sylas.model.tablesDAO.game.getSize
 import ru.sylas.repository.game.genAni
 import ru.sylas.service.gameservice.GameService
-import kotlin.random.Random
 
 
 fun Application.gameRouting(){
@@ -60,6 +56,8 @@ fun Application.gameRouting(){
 
                        respond(when(id.name){
                            GameType.Numbers -> getNumbers()
+                           GameType.Animals -> genAnimals()
+                           GameType.House -> genHouse()
                            else -> throw ForbiddenException("Данная игра вам недоступна")
                        })
                    }
@@ -70,6 +68,25 @@ fun Application.gameRouting(){
         }
         }
     }
+
+fun genHouse(): Games {
+    val listc = listOf(
+        Correspond(1,"circle"),
+        Correspond(2,"semicircle"),
+        Correspond(3,"triangle"),
+        Correspond(4,"square"),
+    )
+    val list = listOf(
+        Corresponding(
+            figures = listc.shuffled(),
+            houses = listc.shuffled()
+        )
+    )
+ return Games.HouseGame(
+     type = GameType.House,
+        correspondings = list
+ )
+}
 
 fun genMenu(): List<GamesResponse> {
     return listOf(
