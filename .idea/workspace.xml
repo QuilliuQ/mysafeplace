@@ -4,42 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + game+ bearer xz first session+game+s4">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/tv/TV.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/tv/TVStat.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tables/tv/TVkey.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/tv/TVDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/tv/TVStatDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/tablesDAO/tv/TVkeyDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/tv/TVRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/repository/tv/TVRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/five.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/seven.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/six.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/images/bees/two.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/finalCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/fistrCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/fiveCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/fourCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/fulltv.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/sevenCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/sixCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/threeCut.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/files/video/twoCut.mp4" afterDir="false" />
+    <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + game+ bearer xz first session+game+s4+5+6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/TVModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/di/TVModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/Games.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/model/dataclass/Games.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/ApiGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/ApiGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/GamesRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/TVRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/TVRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/WatchRoutings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/routings/WatchRoutings.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/tvservice/TVService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/tvservice/TVService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/tvservice/TVServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/service/tvservice/TVServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/finalCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fistrCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fiveCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fourCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fulltv.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/sevenCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/sixCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/threeCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/twoCut.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +131,8 @@
       <workItem from="1648899241931" duration="624000" />
       <workItem from="1648900309505" duration="1000" />
       <workItem from="1648943272332" duration="250000" />
-      <workItem from="1649002343894" duration="32365000" />
+      <workItem from="1649002343894" duration="33553000" />
+      <workItem from="1649178775054" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="restore dao table">
       <created>1648750670099</created>
@@ -228,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649140233246</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test app auth + game+ bearer xz first session+game+s4+5+6">
+      <created>1649177037400</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1649177037400</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +240,8 @@
     <MESSAGE value="test app auth + game+ bearer xz first session+game" />
     <MESSAGE value="test app auth + game+ bearer xz first session+game+menu" />
     <MESSAGE value="test app auth + game+ bearer xz first session+game+s4" />
-    <option name="LAST_COMMIT_MESSAGE" value="test app auth + game+ bearer xz first session+game+s4" />
+    <MESSAGE value="test app auth + game+ bearer xz first session+game+s4+5+6" />
+    <option name="LAST_COMMIT_MESSAGE" value="test app auth + game+ bearer xz first session+game+s4+5+6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
