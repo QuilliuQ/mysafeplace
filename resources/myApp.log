@@ -1,0 +1,1170 @@
+2022-04-06 12:20:12.025 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:20:12.901 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:20:12.913 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:20:12.915 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:20:12.918 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:20:12.922 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:20:12.943 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:20:12.951 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:20:12.960 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:20:12.968 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:20:12.987 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:20:12.990 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:20:12.992 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:20:12.994 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:20:12.998 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:20:13.008 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:20:13.012 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:20:13.016 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:20:13.024 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:20:13.027 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:20:13.031 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:20:13.035 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:20:13.038 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:20:13.042 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:20:13.088 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:20:13.148 [main] INFO  org.reflections.Reflections - Reflections took 59 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:20:13.152 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:20:13.153 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:20:13.154 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:20:13.155 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:20:13.156 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:20:13.183 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:20:13.184 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:20:13.288 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.396 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.409 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.421 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.441 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.452 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.469 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.477 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.490 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.516 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.542 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.563 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.575 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.586 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.599 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.607 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:20:13.607 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:20:13.608 [main] INFO  ktor.application - Application started in 1.742 seconds.
+2022-04-06 12:20:13.608 [main] INFO  ktor.application - Application started: io.ktor.application.Application@616a06e3
+2022-04-06 12:21:11.861 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:21:12.386 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:21:12.390 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:21:12.392 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:21:12.394 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:21:12.395 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:21:12.400 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:21:12.401 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:21:12.403 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:21:12.407 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:21:12.410 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:21:12.411 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:21:12.414 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:21:12.417 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:21:12.421 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:21:12.422 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:21:12.424 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:21:12.426 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:21:12.431 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:21:12.434 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:21:12.437 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:21:12.439 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:21:12.442 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:21:12.445 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:21:12.487 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:21:12.533 [main] INFO  org.reflections.Reflections - Reflections took 44 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:21:12.536 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:21:12.537 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:21:12.538 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:21:12.539 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:21:12.540 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:21:12.541 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:21:12.571 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:21:12.572 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:21:12.694 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.809 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.822 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.834 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.854 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.867 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.879 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.886 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.900 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.938 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.972 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.986 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:12.999 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:13.009 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:13.020 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:13.026 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:13.026 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:21:13.027 [main] INFO  ktor.application - Application started in 1.262 seconds.
+2022-04-06 12:21:13.027 [main] INFO  ktor.application - Application started: io.ktor.application.Application@445bce9a
+2022-04-06 12:21:17.009 [pool-2-thread-1] INFO  ktor.application - [31m301 Moved Permanently[m: [36mGET[m - /
+2022-04-06 12:21:17.040 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /swagger-ui/index.html
+2022-04-06 12:21:17.072 [pool-2-thread-2] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /swagger-ui/swagger-ui.css
+2022-04-06 12:21:17.119 [pool-2-thread-3] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /swagger-ui/swagger-ui-standalone-preset.js
+2022-04-06 12:21:17.132 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /swagger-ui/swagger-ui-bundle.js
+2022-04-06 12:21:17.325 [pool-2-thread-4] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /openapi.json
+2022-04-06 12:21:20.701 [pool-2-thread-3] INFO  ktor.application - [31m404 Not Found[m: [36mGET[m - /logs
+2022-04-06 12:21:20.731 [pool-2-thread-6] INFO  ktor.application - [31m404 Not Found[m: [36mGET[m - /favicon.ico
+2022-04-06 12:21:45.695 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:21:46.291 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:21:46.296 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:21:46.299 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:21:46.302 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:21:46.305 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:21:46.310 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:21:46.312 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:21:46.314 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:21:46.319 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:21:46.323 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:21:46.326 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:21:46.328 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:21:46.331 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:21:46.333 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:21:46.336 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:21:46.340 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:21:46.342 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:21:46.347 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:21:46.349 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:21:46.351 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:21:46.353 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:21:46.355 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:21:46.357 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:21:46.398 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:21:46.452 [main] INFO  org.reflections.Reflections - Reflections took 52 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:21:46.455 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:21:46.456 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:21:46.457 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:21:46.458 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:21:46.459 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:21:46.459 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:21:46.491 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:21:46.492 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:21:46.492 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:21:46.493 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:21:46.494 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:21:46.597 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.714 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.730 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.745 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.778 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.795 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.808 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.819 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.834 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.867 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.897 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.913 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.924 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.934 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.946 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.958 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:21:46.958 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:21:46.959 [main] INFO  ktor.application - Application started in 1.351 seconds.
+2022-04-06 12:21:46.959 [main] INFO  ktor.application - Application started: io.ktor.application.Application@4f114b
+2022-04-06 12:21:47.945 [pool-2-thread-1] DEBUG ktor.application - Unhandled: GET - /logs. Exception class freemarker.template.TemplateNotFoundException: Template not found for name "index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").]
+freemarker.template.TemplateNotFoundException: Template not found for name "index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2883)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2685)
+	at io.ktor.freemarker.FreeMarker.process(FreeMarker.kt:55)
+	at io.ktor.freemarker.FreeMarker.access$process(FreeMarker.kt:33)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invokeSuspend(FreeMarker.kt:45)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invokeSuspend(logs.kt:32)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
+	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
+	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
+	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
+	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
+	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invokeSuspend(DefaultEnginePipeline.kt:127)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.servlet.KtorServlet$asyncService$1.invokeSuspend(KtorServlet.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2022-04-06 12:21:48.722 [pool-2-thread-2] DEBUG ktor.application - Unhandled: GET - /logs. Exception class freemarker.template.TemplateNotFoundException: Template not found for name "index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").]
+freemarker.template.TemplateNotFoundException: Template not found for name "index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2883)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2685)
+	at io.ktor.freemarker.FreeMarker.process(FreeMarker.kt:55)
+	at io.ktor.freemarker.FreeMarker.access$process(FreeMarker.kt:33)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invokeSuspend(FreeMarker.kt:45)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invokeSuspend(logs.kt:32)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
+	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
+	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
+	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
+	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
+	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invokeSuspend(DefaultEnginePipeline.kt:127)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.servlet.KtorServlet$asyncService$1.invokeSuspend(KtorServlet.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2022-04-06 12:42:00.976 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:42:01.754 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:42:01.760 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:42:01.764 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:42:01.767 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:42:01.770 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:42:01.777 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:42:01.780 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:42:01.784 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:42:01.789 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:42:01.792 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:42:01.795 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:42:01.800 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:42:01.803 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:42:01.806 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:42:01.811 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:42:01.814 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:42:01.817 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:42:01.821 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:42:01.824 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:42:01.827 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:42:01.829 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:42:01.833 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:42:01.835 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:42:01.874 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:42:01.934 [main] INFO  org.reflections.Reflections - Reflections took 57 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:42:01.937 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:42:01.938 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:42:01.939 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:42:01.940 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:42:01.940 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:42:01.940 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:42:01.940 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:42:01.940 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:42:01.941 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:42:01.942 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:42:01.943 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:42:02.021 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:42:02.021 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:42:02.021 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:42:02.021 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:42:02.021 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:42:02.021 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:42:02.022 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:42:02.022 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:42:02.022 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:42:02.022 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:42:02.022 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:42:02.171 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.292 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.305 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.317 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.335 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.347 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.359 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.369 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.392 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.424 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.453 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.472 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.485 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.496 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.510 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.519 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:02.519 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:42:02.520 [main] INFO  ktor.application - Application started in 1.632 seconds.
+2022-04-06 12:42:02.520 [main] INFO  ktor.application - Application started: io.ktor.application.Application@67acfde9
+2022-04-06 12:42:24.729 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:42:25.400 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:42:25.406 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:42:25.409 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:42:25.412 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:42:25.414 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:42:25.420 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:42:25.423 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:42:25.426 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:42:25.430 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:42:25.433 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:42:25.436 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:42:25.438 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:42:25.440 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:42:25.442 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:42:25.444 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:42:25.445 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:42:25.447 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:42:25.450 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:42:25.452 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:42:25.454 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:42:25.455 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:42:25.456 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:42:25.458 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:42:25.492 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:42:25.544 [main] INFO  org.reflections.Reflections - Reflections took 50 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:42:25.548 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:42:25.548 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:42:25.548 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:42:25.548 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:42:25.548 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:42:25.549 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:42:25.550 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:42:25.551 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:42:25.552 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:42:25.584 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:42:25.584 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:42:25.586 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:42:25.702 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.811 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.822 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.834 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.852 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.866 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.879 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.888 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.910 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.962 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:25.996 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:26.013 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:26.026 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:26.036 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:26.046 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:26.053 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:42:26.053 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:42:26.054 [main] INFO  ktor.application - Application started in 1.449 seconds.
+2022-04-06 12:42:26.054 [main] INFO  ktor.application - Application started: io.ktor.application.Application@6d69a0d3
+2022-04-06 12:42:28.585 [pool-2-thread-1] DEBUG ktor.application - Unhandled: GET - /logs. Exception class freemarker.template.TemplateNotFoundException: Template not found for name "files/index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").]
+freemarker.template.TemplateNotFoundException: Template not found for name "files/index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2883)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2685)
+	at io.ktor.freemarker.FreeMarker.process(FreeMarker.kt:55)
+	at io.ktor.freemarker.FreeMarker.access$process(FreeMarker.kt:33)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invokeSuspend(FreeMarker.kt:45)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invokeSuspend(logs.kt:32)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
+	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
+	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
+	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
+	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
+	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invokeSuspend(DefaultEnginePipeline.kt:127)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.servlet.KtorServlet$asyncService$1.invokeSuspend(KtorServlet.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2022-04-06 12:43:11.970 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:43:12.683 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:43:12.688 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:43:12.690 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:43:12.692 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:43:12.694 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:43:12.698 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:43:12.701 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:43:12.703 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:43:12.707 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:43:12.709 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:43:12.711 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:43:12.714 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:43:12.715 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:43:12.717 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:43:12.720 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:43:12.726 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:43:12.728 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:43:12.732 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:43:12.735 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:43:12.737 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:43:12.739 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:43:12.741 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:43:12.742 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:43:12.781 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:43:12.829 [main] INFO  org.reflections.Reflections - Reflections took 47 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:43:12.833 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:43:12.834 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:43:12.835 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:43:12.836 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:43:12.837 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:43:12.869 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:43:12.870 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:43:12.871 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:43:12.871 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:43:12.996 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.103 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.115 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.128 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.147 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.159 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.172 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.190 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.206 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.239 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.263 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.277 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.287 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.296 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.306 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.312 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:13.312 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:43:13.313 [main] INFO  ktor.application - Application started in 1.469 seconds.
+2022-04-06 12:43:13.315 [main] INFO  ktor.application - Application started: io.ktor.application.Application@1f916219
+2022-04-06 12:43:19.405 [pool-2-thread-1] DEBUG ktor.application - Unhandled: GET - /logs. Exception class freemarker.template.TemplateNotFoundException: Template not found for name "templates/index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").]
+freemarker.template.TemplateNotFoundException: Template not found for name "templates/index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2883)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2685)
+	at io.ktor.freemarker.FreeMarker.process(FreeMarker.kt:55)
+	at io.ktor.freemarker.FreeMarker.access$process(FreeMarker.kt:33)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invokeSuspend(FreeMarker.kt:45)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invokeSuspend(logs.kt:32)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
+	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
+	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
+	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
+	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
+	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invokeSuspend(DefaultEnginePipeline.kt:127)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.servlet.KtorServlet$asyncService$1.invokeSuspend(KtorServlet.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2022-04-06 12:43:19.977 [pool-2-thread-2] DEBUG ktor.application - Unhandled: GET - /logs. Exception class freemarker.template.TemplateNotFoundException: Template not found for name "templates/index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").]
+freemarker.template.TemplateNotFoundException: Template not found for name "templates/index.ftl".
+The name was interpreted by this TemplateLoader: ClassTemplateLoader(classLoader="jdk.internal.loader.ClassLoaders$AppClassLoader@11028347", basePackagePath="templates/").
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2883)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:2685)
+	at io.ktor.freemarker.FreeMarker.process(FreeMarker.kt:55)
+	at io.ktor.freemarker.FreeMarker.access$process(FreeMarker.kt:33)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invokeSuspend(FreeMarker.kt:45)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.freemarker.FreeMarker$Feature$install$1.invoke(FreeMarker.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invokeSuspend(logs.kt:32)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at ru.sylas.plugins.LogT.LogsKt$logs$2$1.invoke(logs.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.routing.Routing.executeResult(Routing.kt:155)
+	at io.ktor.routing.Routing.interceptor(Routing.kt:39)
+	at io.ktor.routing.Routing$Feature$install$1.invokeSuspend(Routing.kt:107)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.routing.Routing$Feature$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invokeSuspend(ContentNegotiation.kt:145)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.features.ContentNegotiation$Feature$install$1.invoke(ContentNegotiation.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.StatusPages$interceptCall$2.invokeSuspend(StatusPages.kt:102)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$interceptCall$2.invoke(StatusPages.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:89)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:264)
+	at io.ktor.features.StatusPages.interceptCall(StatusPages.kt:101)
+	at io.ktor.features.StatusPages.access$interceptCall(StatusPages.kt:18)
+	at io.ktor.features.StatusPages$Feature$install$2.invokeSuspend(StatusPages.kt:142)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.features.StatusPages$Feature$install$2.invoke(StatusPages.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.features.CallLogging$Feature$install$2.invokeSuspend(CallLogging.kt:188)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.features.CallLogging$Feature$install$2.invoke(CallLogging.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invokeSuspend(DefaultEnginePipeline.kt:127)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$2.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:248)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:116)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute(SuspendFunctionGun.kt:136)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:78)
+	at io.ktor.server.servlet.KtorServlet$asyncService$1.invokeSuspend(KtorServlet.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2022-04-06 12:43:29.945 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:43:30.534 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:43:30.538 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:43:30.540 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:43:30.541 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:43:30.542 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:43:30.545 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:43:30.546 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:43:30.548 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:43:30.551 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:43:30.554 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:43:30.556 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:43:30.558 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:43:30.560 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:43:30.561 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:43:30.564 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:43:30.565 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:43:30.566 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:43:30.570 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:43:30.572 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:43:30.573 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:43:30.575 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:43:30.576 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:43:30.578 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:43:30.613 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:43:30.660 [main] INFO  org.reflections.Reflections - Reflections took 45 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:43:30.664 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:43:30.665 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:43:30.666 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:43:30.667 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:43:30.668 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:43:30.669 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:43:30.701 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:43:30.702 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:43:30.703 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:43:30.703 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:43:30.703 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:43:30.806 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.911 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.923 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.933 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.950 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.961 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.973 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.980 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:30.992 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.025 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.048 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.057 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.066 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.073 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.080 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.084 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:43:31.084 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:43:31.085 [main] INFO  ktor.application - Application started in 1.231 seconds.
+2022-04-06 12:43:31.085 [main] INFO  ktor.application - Application started: io.ktor.application.Application@615efd1c
+2022-04-06 12:43:34.587 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:06.692 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:41.578 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+2022-04-06 12:44:42.141 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Numbers'
+2022-04-06 12:44:42.146 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Animals'
+2022-04-06 12:44:42.149 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'House'
+2022-04-06 12:44:42.152 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Cars'
+2022-04-06 12:44:42.154 [main] DEBUG Exposed - SELECT gametype.id, gametype."type" FROM gametype WHERE gametype."type" = 'Bees'
+2022-04-06 12:44:42.157 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Small'
+2022-04-06 12:44:42.159 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Medium'
+2022-04-06 12:44:42.160 [main] DEBUG Exposed - SELECT sizegame.id, sizegame."size" FROM sizegame WHERE sizegame."size" = 'Large'
+2022-04-06 12:44:42.163 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cat'
+2022-04-06 12:44:42.164 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Dog'
+2022-04-06 12:44:42.166 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Frog'
+2022-04-06 12:44:42.167 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Pig'
+2022-04-06 12:44:42.169 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Duck'
+2022-04-06 12:44:42.171 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Donkey'
+2022-04-06 12:44:42.172 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Cow'
+2022-04-06 12:44:42.174 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Goat'
+2022-04-06 12:44:42.175 [main] DEBUG Exposed - SELECT animal.id, animal."name" FROM animal WHERE animal."name" = 'Chicken'
+2022-04-06 12:44:42.178 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Xiaomi'
+2022-04-06 12:44:42.182 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Nina Honor'
+2022-04-06 12:44:42.186 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Aleksei Samsung'
+2022-04-06 12:44:42.188 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Olga Xiaomi'
+2022-04-06 12:44:42.189 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Iphone'
+2022-04-06 12:44:42.191 [main] DEBUG Exposed - SELECT watchkeys.id, watchkeys."name", watchkeys."123" FROM watchkeys WHERE watchkeys."name" = 'Vitaliy Meizu'
+2022-04-06 12:44:42.226 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/Users/danilyametov/.gradle/caches/modules-2/files-2.1/com.github.papsign/Ktor-OpenAPI-Generator/-SNAPSHOT/7b19b6f997ade8a7a09ab6f8132ca3edda6d243a/Ktor-OpenAPI-Generator--SNAPSHOT.jar!/
+2022-04-06 12:44:42.277 [main] INFO  org.reflections.Reflections - Reflections took 47 ms to scan 1 urls, producing 96 keys and 1182 values 
+2022-04-06 12:44:42.280 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.markers.KMappedMarker -> kotlin.jvm.internal.markers.KMutableMap
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.FilterInputStream -> java.io.BufferedInputStream
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.InputStream -> java.io.FilterInputStream
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Closeable -> java.io.InputStream
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.AutoCloseable -> java.io.Closeable
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.Continuation -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.coroutines.jvm.internal.BaseContinuationImpl
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.constant.Constable -> java.lang.Enum
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Comparable -> java.lang.Enum
+2022-04-06 12:44:42.281 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Enum
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function3
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function1
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function2
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function0
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype java.lang.Throwable -> java.lang.Exception
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> java.lang.Throwable
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.functions.Function6
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReferenceImpl
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KAnnotatedElement -> kotlin.reflect.KCallable
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.CallableReference
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.jvm.internal.FunctionBase
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KFunction -> kotlin.jvm.internal.FunctionReference
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KFunction
+2022-04-06 12:44:42.282 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.Function -> kotlin.reflect.KFunction
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference0 -> kotlin.jvm.internal.PropertyReference0Impl
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.jvm.internal.PropertyReference
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KCallable -> kotlin.reflect.KProperty
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty0 -> kotlin.jvm.internal.PropertyReference0
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.reflect.KProperty -> kotlin.reflect.KProperty0
+2022-04-06 12:44:42.283 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.functions.Function0 -> kotlin.reflect.KProperty0
+2022-04-06 12:44:42.284 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:44:42.284 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:44:42.284 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.coroutines.jvm.internal.SuspendFunction -> kotlin.coroutines.jvm.internal.SuspendLambda
+2022-04-06 12:44:42.284 [main] DEBUG org.reflections.Reflections - expanded subtype kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.Lambda
+2022-04-06 12:44:42.284 [main] DEBUG org.reflections.Reflections - expanded subtype java.io.Serializable -> kotlin.jvm.internal.Lambda
+2022-04-06 12:44:42.284 [main] DEBUG org.reflections.Reflections - expanded subtype io.ktor.http.content.OutgoingContent -> io.ktor.http.content.OutgoingContent$ByteArrayContent
+2022-04-06 12:44:42.285 [main] DEBUG c.papsign.ktor.openapigen.OpenAPIGen - Registering modules in package com.papsign.ktor.openapigen
+2022-04-06 12:44:42.312 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultMapSchemaProvider
+2022-04-06 12:44:42.312 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: MultipartFormDataContentProvider
+2022-04-06 12:44:42.312 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: FinalSchemaBuilderProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultSetSchemaProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: NothingSchemaProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: KtorContentProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultCollectionSchemaProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultObjectSchemaProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultEnumSchemaProvider
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: BinaryContentTypeParser
+2022-04-06 12:44:42.313 [main] TRACE c.papsign.ktor.openapigen.OpenAPIGen - Registering global module: DefaultPrimitiveSchemaProvider
+2022-04-06 12:44:42.414 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.519 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /app::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.530 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.546 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /mobile::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.562 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/register::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.574 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/login::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.585 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.593 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /auth/pin::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.606 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /games::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.636 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.664 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.682 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.703 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/app::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.714 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/game::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.727 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[POST] with OpenAPI description with [KtorContentProvider, KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.736 [main] TRACE c.p.k.o.m.handlers.RouteHandler - Registered /tv/statistic::[GET] with OpenAPI description with [KtorContentProvider, KtorContentProvider]
+2022-04-06 12:44:42.736 [main] INFO  ktor.application - Responding at http://0.0.0.0:8081
+2022-04-06 12:44:42.737 [main] INFO  ktor.application - Application started in 1.244 seconds.
+2022-04-06 12:44:42.737 [main] INFO  ktor.application - Application started: io.ktor.application.Application@615efd1c
+2022-04-06 12:44:44.743 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:52.611 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:53.360 [pool-2-thread-2] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:53.905 [pool-2-thread-1] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:54.302 [pool-2-thread-3] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:44:54.655 [pool-2-thread-2] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs
+2022-04-06 12:52:05.682 [pool-2-thread-4] INFO  ktor.application - [32m200 OK[m: [36mGET[m - /logs

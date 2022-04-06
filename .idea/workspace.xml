@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9b31280-2a5d-4a56-b579-07e4bc425877" name="Changes" comment="test app auth + game+ bearer xz first session+game+s4+5+6">
+      <change afterPath="$PROJECT_DIR$/resources/myApp.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/myApp.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/myApp.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/LogT/LogT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/LogT/logs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/myApp.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/finalCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fistrCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fiveCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fourCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fulltv.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/sevenCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/sixCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/threeCut.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/twoCut.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Database.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Monitoring.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/sylas/plugins/Monitoring.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/files/video/fistrCut.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/files/video/firstCut.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,18 +78,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/ru/sylas" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/ru/sylas" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/files" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/video" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/images/bees" />
       <recent name="$PROJECT_DIR$/src/main/resources/files/images/menu" />
-      <recent name="$PROJECT_DIR$/src/main/resources/files/images/animals" />
-      <recent name="$PROJECT_DIR$/src/main/resources/files/sounds/animals" />
     </key>
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="ru.sylas.model.tables.game" />
@@ -132,7 +142,7 @@
       <workItem from="1648900309505" duration="1000" />
       <workItem from="1648943272332" duration="250000" />
       <workItem from="1649002343894" duration="33553000" />
-      <workItem from="1649178775054" duration="650000" />
+      <workItem from="1649178775054" duration="7099000" />
     </task>
     <task id="LOCAL-00001" summary="restore dao table">
       <created>1648750670099</created>
@@ -211,7 +221,35 @@
       <option name="project" value="LOCAL" />
       <updated>1649177037400</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="test app auth + game+ bearer xz first session+game+s4+5+6">
+      <created>1649188215116</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1649188215116</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test app auth + game+ bearer xz first session+game+s4+5+6">
+      <created>1649188255636</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1649188255636</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test app auth + game+ bearer xz first session+game+s4+5+6">
+      <created>1649188265988</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1649188265988</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test app auth + game+ bearer xz first session+game+s4+5+6">
+      <created>1649188274141</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1649188274141</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
